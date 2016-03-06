@@ -1,0 +1,217 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+}
+
+a{
+    color: #36638E;
+    text-decoration:none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+
+body {
+	width: 100%;
+}
+
+#wrapper{
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+/*
+#content input[type=submit],
+input[type=button],
+button[type=submit],
+button[type=button] {
+    padding: 6px 16px;
+    border: 0;
+    border-bottom: 1px solid #496b93;
+    text-shadow: 0 1px 0 #5578A0;
+    background: #658ab0 url(http://st0.vk.me/images/button_bgf.png) repeat-x top;
+    background-position: 0px -12px;
+    color: #fff;
+    font-size: 11px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    border-radius: 2px;
+    outline: none;
+}
+
+#content input[type=submit]:hover,
+input[type=button]:hover,
+button[type=submit]:hover,
+button[type=button]:hover {
+    background-position: 0px -5px;
+    border-bottom-color: #4e7199;
+}
+
+#content input[type=submit]:active,
+input[type=button]:active,
+button[type=submit]:active,
+button[type=button]:active {
+    background: #5e80a5;
+    border-bottom-color: #51749c;
+    position: relative;
+}
+#content input[type='radio'] {
+    float:left;
+    opacity: 0;
+    height: 17px;
+    z-index: 99999;
+    position: relative;
+    cursor: pointer;
+    display: inline-block; 
+}
+
+#content input[type='radio'] + label {
+    margin: 0 0 2px;
+    background: url('http://sonnier.3dn.ru/radio_sprite.png') transparent no-repeat 0 0;
+    position: relative;
+    font-size: 11px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    color: #636364;
+    cursor: pointer;
+    height: 17px;
+}
+ 
+#content input[type='radio']:checked + label {
+    background-position: 0 -18px;
+}
+
+label{  
+    display:block;   
+    padding-left: 30px;
+}
+
+label[for="allskins"]{  
+    display:block;   
+    padding-left: 20px;
+}
+    
+.zagolovok {
+    font-family: 'Courier New';
+    padding: 5px 0;
+    text-shadow: 2px 2px 1px #f0f0f0;
+    border-radius: 3px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #707281;
+}
+
+*/
+
+
+
+
+/*~~~~~~~~ MIDDLE ~~~~~~~~*/
+#middle{
+	width: 100%;
+	position: relative;
+}
+
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+#container{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+#content{
+    background-color: #fff;
+	padding: 0px 10px 0px 205px;
+	height: 710px;
+	font-family: "Times New Roman", serif;
+	overflow: auto;
+	font-size: 14px;
+}
+
+#content p{
+    line-height: 1.2;
+    text-align: justify;
+}
+
+/* ---- ASIDE NAV ---- */
+#aside-nav{
+	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+	border-right: 2px solid #F0F0F0;
+	background-color: white;
+	float: left;
+	width: 190px;
+	margin-left: -100%;
+	position: relative;
+	font-size: 12px;
+	height: 710px;
+}
+
+#aside-nav .menu{
+	margin-left: 5px;
+	margin-top: 3px;
+    padding-top: 2px;
+    padding-left: 9px;
+}
+
+
+#aside-nav .menu .item a{
+    display: block;
+	font-size: 11px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#aside-nav .menu .item a:hover{
+    background-color: #f5f7fa;
+    text-decoration: underline;
+}
+
+#aside-nav .menu .item .title{ /*Имя пункта меню*/
+    font-weight: bold;
+}
+
+#aside-nav .menu .item .submenu a{ /*Имя пункта подменю*/
+	color: #2B587A;
+	font-weight: normal;
+    padding-left: 15px;
+}
+
+/*~~~~~~~~ END-MIDDLE ~~~~~~~~*/
+
+
+textarea{
+ margin: 4px 1px;
+ padding: 2px 4px;
+ border: 1px solid #D9E0E7;
+ color: #343434;
+ font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+ font-size: 11px;
+ resize: none;
+}

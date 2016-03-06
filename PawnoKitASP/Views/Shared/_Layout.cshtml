@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PawnoKit - Набор скриптера SAMP">
+    <meta name="Keywords" content="PawnoKit, PawnKit, Pawno, Скриптинг">
+    <link type="text/css" rel="stylesheet" href="@Styles.Url("~/Content/css")">
+    <script src="@Scripts.Url("~/Scripts/jquery-1.10.2.min.js")"></script>
+    <link rel="shortcut icon" href="/pfavicon.png" type="image/x-icon">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//vk.com/js/api/xd_connection.js?2"></script>
+    <script>
+        VK.init({apiId: 4145494});
+        VK.callMethod("setLocation", window.location.pathname.slice(1));
+    </script>
+    <title>@ViewBag.Title - PawnoKit</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="middle">
+            <div id="container">
+                <div id="content">
+                    <!-- Render body -->
+                    @RenderBody()
+                </div>
+            </div>
+            <div id="aside-nav">
+                <div class="menu">
+                    <div class="item">
+                        <a href="#" class="title">Главная</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="title">IDs</a>
+                        <div class="submenu">
+                            <a href="#">Список оружия</a>
+                            <a href="#">Списки скинов</a>
+                            <a href="#">Списки транспорта</a>
+                            <a href="#">Цвета транспорта</a>
+                            <a href="#">Иконки на карте</a>
+                            <a href="#">Виды GameText's</a>
+                            <a href="#">Виды взрывов</a>
+                            <a href="#">Виды погоды</a>
+                            <a href="#">Покрасочные работы</a>
+                            <a href="#">Гоночные чекпоинты</a>
+                            <a href="#">Объекты</a>
+                            <a href="#">Интерьеры</a>
+                            <a href="#">Типы пикапов</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="title">IDs</a>
+                        <div class="submenu">
+                            <a href="#">Список оружия</a>
+                            <a href="#">Списки скинов</a>
+                            <a href="#">Списки транспорта</a>
+                            <a href="#">Цвета транспорта</a>
+                            <a href="#">Иконки на карте</a>
+                            <a href="#">Виды GameText's</a>
+                            <a href="#">Виды взрывов</a>
+                            <a href="#">Виды погоды</a>
+                            <a href="#">Покрасочные работы</a>
+                            <a href="#">Гоночные чекпоинты</a>
+                            <a href="#">Объекты</a>
+                            <a href="#">Интерьеры</a>
+                            <a href="#">Менеджер клавиш (KeyFinder)</a>
+                        </div>
+                    </div>
+                </div> <!-- menu -->
+            </div> <!-- Aside nav -->
+        </div>
+    </div>
+</body>
+</html>
