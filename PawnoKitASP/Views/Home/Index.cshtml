@@ -2,117 +2,132 @@
     ViewBag.Title = "Home Page";
 }
 
+<script>
+    (function () {
+        $.event.special.destroyed = {
+            remove: function (o) {
+                if (o.handler) {
+                    o.handler()
+                }
+            }
+        }
+    })();
+</script>
 
-<style>
-    #pk-quote{
-        text-align: right;
-        color: gray;
-    }
+<script>
+    window.onload = function () {
 
-    #pk-images {
-        margin-top: 10px;
-        text-align:center;
-    }
+        // просто функция добавляет DIV с нужным нам текстом
+        function appendText(text) {
+            var div = document.createElement("div");
+            div.innerHTML = text;
+            document.body.appendChild(div);
+        }
 
-    p#pk-title {
-        margin: 5px auto 0px auto;
-        padding: 5px;
-        text-align: center;
-        font-size: 25px; 
-    }
+        // функция для ссылок обрабатывается при клике на ссылку
+        function handlerAnchors() {
 
-    #pk-switch-language a{
-        display: block;
-    }
-    
-    #pk-switch-language a img{
-        float:right;
-        height: 16px;
-    }
+            // заполним хранилище чем нибудь
+            var state = {
+                title: this.getAttribute("title"),
+                url: this.getAttribute("href", 2) // двоечка нужна для ИЕ6-7
+            }
 
-    .news{
-        margin: 10px 5px 10px 5px;
-        font-weight: bold;
-        font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
-        font-size: 11px;
-        min-height: 62px;
-    }
+            // заносим ссылку в историю
+            history.pushState(state, state.title, state.url);
 
-    .news .n-image{
-        content:url('//app.pawnokit.ru/assets/components/phpthumbof/cache/w256h256138021415102.94f21b45a478b2a68b0eefceeca9dba91.png');
-    }
+            // тут можете вызвать подгруздку данных и т.п.
+            // ...
 
-    .news .n-title{
-        font-weight: bold;
-        padding: 2px 2px 4px 0px;
-    }
+            appendText('<b>Вы перешли по ссылке:</b> ' +
+                            '<span style="color: green;">' + state.url + '</span>');
 
-    .news .n-prevtext{
-        margin-left: 80px;
-        display: block;
-        font-weight: normal;
-    }
+            // не даем выполнить действие по умолчанию
+            return false;
+        }
 
-    .news .n-text{
-        font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
-        font-size: 11px;
-        display: block;
-        color: #777777;
-    }
+        // ищем все ссылки
+        var anchors = document.getElementsByTagName('a');
 
-    .news .n-footer{
-        border-bottom: 1px solid #EDEDED;
-        padding: 7px;
-        background: #FFFFFF;
-    }
+        // вешаем события на все ссылки в нашем документе
+        for (var i = 0; i < anchors.length; i++) {
+            anchors[i].onclick = handlerAnchors;
+        }
 
-    .news .n-postdate{
-        font-size: 8px;
-        font-weight: normal;
-        display: inline;
-        margin-left: 5px;
+        // вешаем событие на popstate которое срабатывает
+        // при нажатии back/forward в браузере
+        window.onpopstate = function (e) {
+
+            // просто сообщение
+            appendText('<b>Вы вернулись на страницу:</b> ' +
+                '<span style="color: green;">' + history.location + '</span>' +
+                '<br/><b>state:</b> <span style="color: green;">' +
+                JSON.stringify(history.state) + '</span><br/><br/>');
+
+            // тут можете вызвать подгруздку данных и т.п.
+            // ...
+        }
     }
 
-    .news .n-image{
-        clear: left;
-        float: left;
-        max-height:58px;
-        border: 1px solid gray;
-        padding: 2px; 
-        max-width: 100px;
-    }
 
-    .news .annotation{
-        font-size: 10px;
-        font-weight: bold;
-    }
+    //$( ".hello" ).empty();
+    //window.onload = function()
+    //{
+        //location.hash = "nyanya";
+        //location.href.split('#');
+        //window.history.pushState('page2', 'Title', '/page2.php');
 
-    .news ul li{
-        list-style-type:none;
+      //  Start();
+    //}
+
+    function Start()
+    {
+        setTimeout(function () {
+            // 1
+            $("<link/>", {
+                rel: "stylesheet",
+                type: "text/css",
+                href: "@Url.Content("~/Content/IndexCss.css")"
+            }).appendTo("head");
+
+            // 2
+            $.ajax({
+                async: false,
+                url: '@Url.Content("~/Content/IndexJs.js")',
+                dataType: "script"
+            });
+
+            setTimeout(function () {
+                $("link[href='@Url.Content("~/Content/IndexCss.css")']").remove();
+                $("#content").empty();
+            }, 5000);
+        }, 5000);
     }
-</style>
+</script>
 
 <div id="pk-images">
-    <img src="http://app.pawnokit.ru/images/v2_logo_washed.gif" width="200" height="200" />
-    <img src="http://app.pawnokit.ru/images/vkview.png" style="margin-left: 11px;" width="300" height="199" />
+    <img src="//app.pawnokit.ru/images/v2_logo_washed.gif" width="200" height="200" />
+    <img src="//app.pawnokit.ru/images/vkview.png" style="margin-left: 11px;" width="300" height="199" />
 </div>
 
 <p id="pk-title">PawnoKit</p>
 
 <blockquote id="pk-quote">Все для скриптинга,<br />Всегда под рукой</blockquote>
 
+<div id="module"></div>
+
 <div id="pk-switch-language">
     <a href="https://app.pawnokit.ru/en/">
-        <img src="http://app.pawnokit.ru/United-Kingdom.png" title="English Language" />
+        <img src="//app.pawnokit.ru/United-Kingdom.png" title="English Language" />
     </a>
     <a href="https://app.pawnokit.ru/">
-        <img src="http://app.pawnokit.ru/Russia.png" title="Russian Language" />
+        <img src="//app.pawnokit.ru/Russia.png" title="Russian Language" />
     </a>
 </div>
 
 <article class="news">
     <aside>
-        <img class="n-image" />
+        <img class="n-image" src="//app.pawnokit.ru/assets/components/phpthumbof/cache/w256h256138021415102.94f21b45a478b2a68b0eefceeca9dba91.png"/>
     </aside>
     <section class="n-prevtext">
         <header class="n-title">
