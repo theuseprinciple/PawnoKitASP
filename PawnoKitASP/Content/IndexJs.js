@@ -1,23 +1,18 @@
-﻿var CurrentModule = {
+﻿Page = {
     Install: function () {
         $("#pk-quote").css('color', "green");
-        alert("script iss loaded");
+        console.log("script iss loaded");
     },
-    Remove: function () { 
-        alert("Element was removed");
-        $("#module").unbind("destroyed");
+    Uninstall: function () {
+        console.log("Element was removed");
     },
 };
 
-
-(function () {
-
-    CurrentModule.Install();
-
-    $('#module').bind('destroyed', function () {
-        CurrentModule.Remove();
-        delete CurrentModule;
-    });
-})();
-
+$(document).ready(function () {
+    try {
+        PawnoKitPager.installPageScript(Page);
+    } catch (e) {
+        Page.Install();
+    }
+});
 

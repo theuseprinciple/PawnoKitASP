@@ -235,6 +235,7 @@
     <Content Include="Scripts\inboxed\modernizr-2.6.2.js" />
     <Content Include="Scripts\inboxed\respond.js" />
     <Content Include="Scripts\inboxed\respond.min.js" />
+    <Content Include="Scripts\pawnokitpager.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Scripts\pawnokit.js" />
     <Content Include="Web.config" />
