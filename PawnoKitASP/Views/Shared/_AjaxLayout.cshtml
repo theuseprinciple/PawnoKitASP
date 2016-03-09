@@ -1,0 +1,30 @@
+﻿@using PawnoKitASP.Models;
+@using System.Web.Script.Serialization;
+
+@{
+    /*
+PageJSONInfoModel PageJSONInfo = new PageJSONInfoModel(
+    ViewBag.Title,
+    ViewBag.ScriptUrl,
+    ViewBag.StylesUrls,
+    RenderBody()
+);
+*/
+
+//var json = new JavaScriptSerializer().Serialize(PageJSONInfo);
+}
+
+<script type="application/json">
+    {
+        'title' : '@ViewBag.Title',
+        'scriptUrl' : '@ViewBag.ScriptUrl',
+        'stylesUrls' : [ 
+            @foreach (var str in ViewBag.StylesUrls)
+            {
+                @Html.Raw(String.Format("'{0}',", str));
+            }
+        ],
+        'body' : '@Json.Encode(RenderBody().ToHtmlString())'
+    }
+</script>
+

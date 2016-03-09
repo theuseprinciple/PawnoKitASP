@@ -1,3 +1,4 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = Request.IsAjaxRequest() ? "~/Views/Shared/_AjaxLayout.cshtml" : "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_AjaxLayout.cshtml";
 }
