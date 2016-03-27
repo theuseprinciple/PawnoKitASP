@@ -13,21 +13,46 @@ namespace PawnoKitASP.Controllers
         
         public ActionResult Index()
         {
-            
+            /*
+            ViewBag.StylesUrls = new List<string> {
+                Url.Content("~/Content/IndexCss.css"),
+                Url.Content("~/Content/IndexCss.css")
+            };
+            */
+
+            // get styles
+            var pfPaths = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.css");
+
+            List<string> names = null;
+            if (pfPaths.Count() > 0)
+            {
+                names = new List<string>();
+                foreach (var pfP in pfPaths)
+                {
+                    names.Add(Url.Content(String.Format("~/Content/Pages/Index/{0}", Path.GetFileName(pfP))));
+                }
+            }
+            ViewBag.StylesUrls = names;
+
+            // get script
+            pfPaths = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.js");
+            if(pfPaths.Count() > 0)
+            {
+                string path = pfPaths.First();
+                ViewBag.ScriptUrl = Url.Content(String.Format("~/Content/Pages/Index/{0}", Path.GetFileName(path)));
+            }
+            else
+            {
+                ViewBag.ScriptUrl = null;
+            }
+            //ViewBag.ScriptUrl = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.js").First();
+            //ViewBag.ScriptUrl = Url.Content("~/Content/IndexJs.js");
             return View();
         }
-        
 
-        public ActionResult About()
+        public ActionResult Error(int id)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            Response.StatusCode = id;
 
             return View();
         }

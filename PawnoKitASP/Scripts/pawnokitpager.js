@@ -16,7 +16,6 @@ var PawnoKitPager = {
 
     loadedCssCount: 0,
     isScriptInstalled: false,
-    isPageLoaded: false,
 
     /* 
         SCRIPT
@@ -65,6 +64,8 @@ var PawnoKitPager = {
         }).appendTo("head");
 
         PawnoKitPager.loadedCssCount++;
+
+        console.log("style loaded = " + url);
     },
 
     // remove 1 loaded style
@@ -95,42 +96,69 @@ var PawnoKitPager = {
     /* 
         CONTENT
     */
-    loadContent: function (contentHTML) {
-        $(PawnoKitPager.currentParentalDiv).append(contentHTML);
+
+    /*
+    loadContent: function (url) {
+        //$(PawnoKitPager.currentParentalDiv).append(contentHTML);
+        $(PawnoKitPager.currentParentalDiv).load(url);
     },
+    */
 
-
+    /*
     unloadContent: function () {
         $(PawnoKitPager.currentParentalDiv).empty();
     },
+    */
 
     /*
         PAGE LOADER
     */
-    loadPage: function (pageInfoJSON) {
-        PawnoKitPager.loadContent(pageInfoJSON["content"]);
+    loadPage: function (url) {
 
-        if (pageInfoJSON["stylesUrls"] !== 'undefined') {
-            pageInfoJSON["stylesUrls"].forEach(function (item, index, object) {
-                PawnoKitPager.loadPageStyle(item);
+        //PawnoKitPager.loadContent(url);
+
+        $(PawnoKitPager.currentParentalDiv).load(url, function (response, status, xhr) {
+
+            document.title = $("#attrs #pageTitle").data("pkinfo");
+            $("#attrs #pageStyles").children().each(function (index, element) {
+                PawnoKitPager.loadPageStyle(
+                    $(element).data("pkinfo")
+                );
             });
-        }
 
-        if (pageInfoJSON["scriptUrl"] !== 'undefined') {
-            PawnoKitPager.loadPageScript(pageInfoJSON["scriptUrl"]);
-        }
+            PawnoKitPager.loadPageScript(
+                $("#attrs #pageScriptUrl").data("pkinfo")
+            );
+
+        });
+        /*
+        document.title = $("#attr-pageTitle").data("pkinfo");
+        $("#attr-styles").each(function (index) {
+            PawnoKitPager.loadPageStyle(
+                $(this).data("pkinfo")
+            );
+        });
+
+        PawnoKitPager.loadPageScript(
+            $("#attr-scriptUrl").data("pkinfo")
+        );
 
         PawnoKitPager.isPageLoaded = true;
+        */
     },
 
 
     unloadCurrentPage: function () {
-        if (PawnoKitPager.isPageLoaded) {
-            PawnoKitPager.unloadContent();
+        $(PawnoKitPager.currentParentalDiv).empty();
+        try {
             PawnoKitPager.unloadAllPageStyles();
+        }
+        catch (e) { }
+        // 
+        try {
             PawnoKitPager.uninstallPageScript();
         }
-        PawnoKitPager.isPageLoaded = false;
+        catch (e) { }
     },
 
     /*
@@ -171,24 +199,35 @@ $(document).ready(function () {
                 })
 
                 .click(function () {
+                    /*
                     history.pushState(state, state.title, state.url);
                     appendText('<b>Вы перешли по ссылке:</b> ' +
-                            '<span style="color: green;">' + state.url + '</span>');
+                           '<span style="color: green;">' + state.url + '</span>');
+                    */
 
                     // Start loading JSON Page info
+                    history.pushState(state, state.title, state.url);
+                    PawnoKitPager.unloadCurrentPage();
+                    PawnoKitPager.loadPage(state.url);
+
                 });
         });
     }
     
     window.onpopstate = function (e) {
+        /*
         // просто сообщение
         appendText('<b>Вы вернулись на страницу:</b> ' +
             '<span style="color: green;">' + history.location + '</span>' +
             '<br/><b>state:</b> <span style="color: green;">' +
             JSON.stringify(history.state) + '</span><br/><br/>');
+        */
 
         // START LOADING JSON PAGE INFO
+        PawnoKitPager.unloadCurrentPage();
+        PawnoKitPager.loadPage(history.state.url);
     }
+    
 });
 
 /*

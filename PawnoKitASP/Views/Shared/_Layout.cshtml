@@ -21,7 +21,8 @@
         <script src="@Scripts.Url("~/Scripts/pawnokitpager.js")"></script>
     }
 
-    @if (ViewBag.ScriptUrl != null)
+    
+    @if (ViewBag.StylesUrls != null) // загрузить все стили если они есть
     {
         foreach (var str in ViewBag.StylesUrls)
         {
@@ -34,21 +35,17 @@
                 $(document).ready(function () {
                     @foreach (var str in ViewBag.StylesUrls)
                     {
-                        @Html.Raw(String.Format("PawnoKitPager.loadedPageStylesUrls.push('{0}');", str));
-                        @Html.Raw("PawnoKitPager.loadedCssCount++;");
+                        @Html.Raw(String.Format(@"
+                            PawnoKitPager.loadedPageStylesUrls.push('{0}');
+                            PawnoKitPager.loadedCssCount++;
+                        ", str));
                     }
-                    PawnoKitPager.isPageLoaded = true;
                 });
             </script>
-
-            foreach (var str in ViewBag.StylesUrls)
-            {
-                <link href="@str" rel="stylesheet" type="text/css" />
-            }
         }
     }
 
-    @if (ViewBag.ScriptUrl != null)
+    @if (ViewBag.ScriptUrl != null) // подключить скрипт если он есть
     {
         <script src="@ViewBag.ScriptUrl"></script>
     }
@@ -69,10 +66,10 @@
             <div id="aside-nav">
                 <div class="menu">
                     <div class="item">
-                        <a href="#" class="title">Главная</a>
+                        <a href="/" class="title">Главная</a>
                     </div>
                     <div class="item">
-                        <a href="#" class="title">IDs</a>
+                        <a href="/ids" class="title">IDs</a>
                         <div class="submenu">
                             <a href="/ids/guns" title="Список оружия">Список оружия</a>
                             <a href="/ids/skins" title="Списки скинов">Списки скинов</a>
