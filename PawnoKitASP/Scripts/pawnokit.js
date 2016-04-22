@@ -1,8 +1,4 @@
-﻿(function () {
-    
-})();
-
-String.prototype.format = function () {
+﻿String.prototype.format = function () {
     var formatted = this;
     for (var i = 0; i < arguments.length; i++) {
         var regexp = new RegExp('\\{' + i + '\\}', 'gi');
@@ -15,7 +11,7 @@ var Page = {};
 
 //a:not(.external)
 var PawnoKit = {
-    hideLinks: function (selector) {
+    improveLinks: function (selector) {
         $(selector).each(function () {
             var href = $(this).attr('href');
             $(this)

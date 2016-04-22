@@ -12,9 +12,8 @@
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link type="text/css" rel="stylesheet" href="@Styles.Url("~/Content/css")">
     <script src="@Scripts.Url("~/Scripts/jquery-1.10.2.min.js")"></script>
-    <script src="//vk.com/js/api/xd_connection.js?2"></script>
-    <script>VK.init({ apiId: 4145494 });VK.callMethod("setLocation", window.location.pathname.slice(1));</script>
     <script src="@Scripts.Url("~/Scripts/pawnokit.js")"></script>
+
     @if (2 > 1) // LOAD WITH PAGER
     {
         <script src="@Scripts.Url("~/Scripts/history.js")"></script>
@@ -22,35 +21,23 @@
     }
 
     
-    @if (ViewBag.StylesUrls != null) // загрузить все стили если они есть
+    @if (ViewBag.StyleUrl != null)
     {
-        foreach (var str in ViewBag.StylesUrls)
-        {
-            <link href="@str" rel="stylesheet" type="text/css" />
-        }
-
+        <link href="@ViewBag.StyleUrl" rel="stylesheet" type="text/css" />
         if (2 > 1)// LOAD WITH PAGER
         {
             <script>
-                $(document).ready(function () {
-                    @foreach (var str in ViewBag.StylesUrls)
-                    {
-                        @Html.Raw(String.Format(@"
-                            PawnoKitPager.loadedPageStylesUrls.push('{0}');
-                            PawnoKitPager.loadedCssCount++;
-                        ", str));
-                    }
-                });
+                PawnoKitPager.markStyleAsLoaded("@ViewBag.StyleUrl");
             </script>
         }
     }
 
-    @if (ViewBag.ScriptUrl != null) // подключить скрипт если он есть
+    @if (ViewBag.ScriptUrl != null)
     {
         <script src="@ViewBag.ScriptUrl"></script>
     }
 
-    <script>$(document).ready(function () { PawnoKit.hideLinks("a:not(.external)") });</script>
+    <script>$(document).ready(function () { PawnoKit.improveLinks("a:not(.external)") });</script>
     <link rel="shortcut icon" href="/pfavicon.png" type="image/x-icon">
     <title>@ViewBag.Title - PawnoKit</title>
 </head>
@@ -71,9 +58,11 @@
                     <div class="item">
                         <a href="/ids" class="title">IDs</a>
                         <div class="submenu">
+                            <a href="/skins" title="Списки скинов">Списки скинов</a>
+                            <a href="/vehicles" title="Списки транспорта">Списки транспорта</a>
+
                             <a href="/ids/guns" title="Список оружия">Список оружия</a>
-                            <a href="/ids/skins" title="Списки скинов">Списки скинов</a>
-                            <a href="/ids/vehicles" title="Списки транспорта">Списки транспорта</a>
+                            
                             <a href="/ids/cars" title="Цвета транспорта">Цвета транспорта</a>
                             <a href="#">Иконки на карте</a>
                             <a href="#">Виды GameText's</a>

@@ -1,19 +1,7 @@
 ﻿<div id="attrs">
     <span id="pageTitle" data-pkinfo="@ViewBag.Title" />
     <span id="pageScriptUrl" data-pkinfo="@ViewBag.ScriptUrl" />
-    <div id="pageStyles">
-        @{
-            if(ViewBag.StylesUrls != null)
-            { 
-            int idx = 0;
-            foreach (var str in ViewBag.StylesUrls)
-            {
-                <span id="styleUrl-@idx" data-pkinfo="@str" />
-                    idx++;
-                }
-            }
-       }
-    </div>
+    <span id="pageStyleUrl" data-pkinfo="@ViewBag.StyleUrl" />
 </div>
 @RenderBody()
 

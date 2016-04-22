@@ -14,12 +14,6 @@ namespace PawnoKitASP.Controllers
         public ActionResult Index()
         {
             /*
-            ViewBag.StylesUrls = new List<string> {
-                Url.Content("~/Content/IndexCss.css"),
-                Url.Content("~/Content/IndexCss.css")
-            };
-            */
-
             // get styles
             var pfPaths = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.css");
 
@@ -45,8 +39,7 @@ namespace PawnoKitASP.Controllers
             {
                 ViewBag.ScriptUrl = null;
             }
-            //ViewBag.ScriptUrl = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.js").First();
-            //ViewBag.ScriptUrl = Url.Content("~/Content/IndexJs.js");
+           */
             return View();
         }
 

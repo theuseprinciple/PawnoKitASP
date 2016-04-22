@@ -195,7 +195,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,8 +211,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Pages\Index\IndexCss.css" />
-    <Content Include="Content\Pages\Index\IndexJs.js" />
+    <Content Include="Content\Pages\Index\style.css" />
+    <Content Include="Content\Pages\Index\script.js" />
+    <Content Include="Content\Pages\Skins\script.js" />
+    <Content Include="Content\Pages\Skins\style.css" />
+    <Content Include="Content\Pages\Vehicles\script.js" />
+    <Content Include="Content\Pages\Vehicles\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -259,15 +265,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_AjaxLayout.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\En\Index.cshtml" />
+    <Content Include="Views\En\Skins.cshtml" />
+    <Content Include="Views\En\Vehicles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Pages\IDs\Skins\" />
-    <Folder Include="Content\Pages\IDs\Vehicles\" />
-    <Folder Include="Content\Pages\IDs\Weapons\" />
-    <Folder Include="Content\Pages\Tools\" />
-    <Folder Include="Views\En\IDs\" />
-    <Folder Include="Views\En\Tools\" />
     <Folder Include="Views\Pawnokit\" />
     <Folder Include="Views\Ru\IDs\" />
     <Folder Include="Views\Ru\Tools\" />

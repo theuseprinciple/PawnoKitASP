@@ -1,0 +1,77 @@
+﻿#content input[type=submit],
+input[type=button],
+button[type=submit],
+button[type=button] {
+    padding: 6px 16px;
+    border: 0;
+    border-bottom: 1px solid #496b93;
+    text-shadow: 0 1px 0 #5578A0;
+    background: #658ab0 url(http://st0.vk.me/images/button_bgf.png) repeat-x top;
+    background-position: 0px -12px;
+    color: #fff;
+    font-size: 11px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    border-radius: 2px;
+    outline: none;
+}
+
+#content input[type=submit]:hover,
+input[type=button]:hover,
+button[type=submit]:hover,
+button[type=button]:hover {
+    background-position: 0px -5px;
+    border-bottom-color: #4e7199;
+}
+
+#content input[type=submit]:active,
+input[type=button]:active,
+button[type=submit]:active,
+button[type=button]:active {
+    background: #5e80a5;
+    border-bottom-color: #51749c;
+    position: relative;
+}
+#content input[type='radio'] {
+    float:left;
+    opacity: 0;
+    height: 17px;
+    z-index: 99999;
+    position: relative;
+    cursor: pointer;
+    display: inline-block; 
+}
+
+#content input[type='radio'] + label {
+    margin: 0 0 2px;
+    background: url('http://sonnier.3dn.ru/radio_sprite.png') transparent no-repeat 0 0;
+    position: relative;
+    font-size: 11px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    color: #636364;
+    cursor: pointer;
+    height: 17px;
+}
+ 
+#content input[type='radio']:checked + label {
+    background-position: 0 -18px;
+}
+
+label{  
+    display:block;   
+    padding-left: 30px;
+}
+
+label[for="allskins"]{  
+    display:block;   
+    padding-left: 20px;
+}
+    
+.zagolovok {
+    font-family: 'Courier New';
+    padding: 5px 0;
+    text-shadow: 2px 2px 1px #f0f0f0;
+    border-radius: 3px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #707281;
+}

@@ -1,219 +1,183 @@
-﻿
-var PawnoKitPager = {
-    /*
-        Loads page into parentDiv
+﻿PawnoKit.improveLinks = function (selector) {
+    $(selector).each(function () {
+        var href = $(this).attr('href');
+        var title = $(this).attr('title');
+        var state = { title: title, url: href };
+        $(this)
+            .removeAttr('href')
 
-        LIMITS PER 1 PAGE:
-            - 1 page script:
-                * All of them have to contain var Page = {};
-                With methods: Install, Uninstall
-                * (function () {PawnoKitPager.installPageScript(Page);}
-
-            - unlimited page css styles
-            - 1 page content
-    */
-    currentParentalDiv: null,
-
-    loadedCssCount: 0,
-    isScriptInstalled: false,
-
-    /* 
-        SCRIPT
-    */
-    currentPageScriptObj: null,
-
-    installPageScript: function (page) { // calling from page script
-        page.Install();
-        PawnoKitPager.currentPageScriptObj = page;
-        PawnoKitPager.isScriptInstalled = true;
-        console.log("script installed");
-    },
-
-    uninstallPageScript: function () {// usage PawnoKitPager.uninstallPageScript()
-        PawnoKitPager.currentPageScriptObj.Uninstall();
-        PawnoKitPager.currentPageScriptObj = null;
-        PawnoKitPager.isScriptInstalled = false;
-    },
-
-    loadPageScript: function (url) {
-        $.getScript(url)
-            .done(function (script, textStatus) {
-                // script has just called installPageScript
-                console.log("page script installed from " + url);
+            .css({
+                cursor: 'pointer'
             })
-            .fail(function (jqxhr, settings, exception) {
-                // cannot install script, installPageScript hasn't been called
-                console.log("cannot install page script from " + url);
+
+            .click(function () {
+                // Вы перешли по ссылке
+
+                // Start loading JSON Page info
+                history.pushState(state, state.title, state.url);
+                PawnoKitPager.unloadCurrentPage();
+                PawnoKitPager.loadPage(state.url);
+
             });
+    });
+}
+
+var PawnoKitPager = {
+
+    _parentalDiv: null,
+
+    _loadedScript: {},
+    _loadedScriptUrl: null,
+    _isScriptLoaded: false,
+
+    _loadedStyleUrl: null,
+    _isStyleLoaded: false,
+
+    _markScriptAsLoaded: function () {
+        this._isScriptLoaded = true;
     },
 
-    /* 
-        STYLE
-    */
-
-    loadedPageStylesUrls: [],
-
-    // load 1 style from url
-    loadPageStyle: function (url) {
-        PawnoKitPager.loadedPageStylesUrls.push(url);
-
-        $("<link/>", {
-            rel: "stylesheet",
-            type: "text/css",
-            href: url
-        }).appendTo("head");
-
-        PawnoKitPager.loadedCssCount++;
-
-        console.log("style loaded = " + url);
+    _markScriptAsUnloaded: function(){
+        this._isScriptLoaded = false;
     },
 
-    // remove 1 loaded style
-    unloadPageStyle: function (loadedStyleUrl) {
-        if (PawnoKitPager.loadedCssCount > 0) {
-            PawnoKitPager.loadedPageStylesUrls.forEach(function (item, index, object) {
-                if (item === loadedStyleUrl) {
-                    $('link[href="' + loadedStyleUrl + '"]').remove();
-                    object.splice(index, 1);
-                    PawnoKitPager.loadedCssCount--;
-                    return null;
-                }
-            });
+    markStyleAsLoaded: function (styleUrl) {
+        this._loadedScriptUrl = styleUrl;
+        this._isStyleLoaded = true;
+    },
+
+    _markStyleAsUnloaded: function(){
+        this._isStyleLoaded = false;
+        this._loadedStyleUrl = null;
+        
+    },
+
+    isStyleLoaded: function () { return this._isStyleLoaded; },
+    isScriptLoaded: function () { return this._isScriptLoaded; },
+
+    getStyleUrl: function () { return this._loadedStyleUrl; },
+
+    installPageScript: function (pageScript) {
+        if (!this.isScriptLoaded())
+        {
+            this._loadedScript = pageScript;
+            this._loadedScript.Install();
+            this._markScriptAsLoaded();
+
+            console.log("Script's been loaded");
         }
+        else console.log("Cannot install page script since script is already installed"); 
     },
 
-    // remove all loaded styles
-    unloadAllPageStyles: function () {
-        if (PawnoKitPager.loadedCssCount > 0) {
-            PawnoKitPager.loadedPageStylesUrls.forEach(function (item, index, object) {
-                $('link[href="' + item + '"]').remove();
-                object.splice(index, 1);
-                PawnoKitPager.loadedCssCount--;
-            });
+    installPageStyle: function (styleUrl) {
+        if (!this.isStyleLoaded())
+        {
+            $("<link/>", {
+                rel: "stylesheet",
+                type: "text/css",
+                href: styleUrl
+            }).appendTo("head");
+
+            this.markStyleAsLoaded(styleUrl);
+
+            console.log("Style has been installed from " + styleUrl);
         }
+        else console.log("Cannot install page style since style is already installed");
     },
 
-    /* 
-        CONTENT
-    */
+    _uninstallPageScript: function () {
+        if (this.isScriptLoaded())
+        {
+            this._loadedScript.Uninstall();
+            this._loadedScript = {};
+            this._markScriptAsUnloaded();
 
-    /*
-    loadContent: function (url) {
-        //$(PawnoKitPager.currentParentalDiv).append(contentHTML);
-        $(PawnoKitPager.currentParentalDiv).load(url);
+            console.log("Script's been unloaded");
+        }
+        else console.log("No any script installed to unload");
+        
     },
-    */
+    
+    _uninstallPageStyle: function () {
+        if (this.isStyleLoaded())
+        {
+            $('link[href="' + this.getStyleUrl() + '"]').remove();
+            this._markStyleAsUnloaded();
 
-    /*
-    unloadContent: function () {
-        $(PawnoKitPager.currentParentalDiv).empty();
+            console.log("Style's been unloaded");
+        }
+        else console.log("No any style installed to unload");
     },
-    */
 
-    /*
-        PAGE LOADER
-    */
     loadPage: function (url) {
 
-        //PawnoKitPager.loadContent(url);
+        var self = this;
+        $(this._parentalDiv).load(url, function (response, status, xhr) {
 
-        $(PawnoKitPager.currentParentalDiv).load(url, function (response, status, xhr) {
+            if (status == "error") {
+                console.log("cannot load page: " + msg + xhr.status + " " + xhr.statusText);
+                return;
+            }
 
-            document.title = $("#attrs #pageTitle").data("pkinfo");
-            $("#attrs #pageStyles").children().each(function (index, element) {
-                PawnoKitPager.loadPageStyle(
-                    $(element).data("pkinfo")
+            // set title
+            document.title = $("#attrs #pageTitle").data("pkinfo"); //eject title
+ 
+            // install style
+            try {
+                var styleUrl = $("#attrs #pageStyleUrl").data("pkinfo");
+                self.installPageStyle(
+                    styleUrl
                 );
-            });
+            }
+            catch (e) { console.log("No styles available to install found: " + e.toString()); }
 
-            PawnoKitPager.loadPageScript(
-                $("#attrs #pageScriptUrl").data("pkinfo")
-            );
+            // install script
+            try{
+                var scriptUrl = $("#attrs #pageScriptUrl").data("pkinfo");
+                $.getScript(
+                    scriptUrl
+                )
+                .done(function (script, textStatus) {
+                    // script will call PawnoKitPager.installPageScript by itself
+                })
+                .fail(function (jqxhr, settings, exception) {
+                    console.log("Cannot get page script from " + scriptUrl);
+                });
+            }
+            catch (e) { console.log("No scripts available to install found: " + e.toString()); }
 
+            // hide all links in parental and hang clicks upon them
+            PawnoKit.improveLinks(this._parentalDiv + " a:not(.external)");
+
+            console.log("Page has been loaded from " + url);
         });
-        /*
-        document.title = $("#attr-pageTitle").data("pkinfo");
-        $("#attr-styles").each(function (index) {
-            PawnoKitPager.loadPageStyle(
-                $(this).data("pkinfo")
-            );
-        });
-
-        PawnoKitPager.loadPageScript(
-            $("#attr-scriptUrl").data("pkinfo")
-        );
-
-        PawnoKitPager.isPageLoaded = true;
-        */
     },
-
 
     unloadCurrentPage: function () {
-        $(PawnoKitPager.currentParentalDiv).empty();
-        try {
-            PawnoKitPager.unloadAllPageStyles();
-        }
-        catch (e) { }
-        // 
-        try {
-            PawnoKitPager.uninstallPageScript();
-        }
-        catch (e) { }
+        this._uninstallPageScript();
+        this._uninstallPageStyle();
+        $(this._parentalDiv).empty();
+        console.log("Page has been unloaded");
     },
 
-    /*
-        INSTALLER
-    */
-    install: function (parentDiv) {
-        PawnoKitPager.currentParentalDiv = parentDiv;
-    },
-};
+    Install: function (parentDiv) {
+        this._parentalDiv = parentDiv;
+    }
+}
+
 
 $(document).ready(function () {
-    PawnoKitPager.install($("#content").get());
+    PawnoKitPager.Install(
+        $("#content").get()
+    );
 
-    // fill firts page info into history
     var st = {
         title: $(document).find("title").text(),
         url: window.location.pathname
     };
+
     history.replaceState(st, st.title, st.url); 
-    // ~~~~
 
-    function appendText(text) {
-        var div = document.createElement("div");
-        div.innerHTML = text;
-        document.body.appendChild(div);
-    }
-
-    PawnoKit.hideLinks = function () {
-        $('a:not(.external)').each(function () {
-            var href = $(this).attr('href');
-            var title = $(this).attr('title');
-            var state = { title: title, url: href };
-            $(this)
-                .removeAttr('href')
-
-                .css({
-                    cursor: 'pointer'
-                })
-
-                .click(function () {
-                    /*
-                    history.pushState(state, state.title, state.url);
-                    appendText('<b>Вы перешли по ссылке:</b> ' +
-                           '<span style="color: green;">' + state.url + '</span>');
-                    */
-
-                    // Start loading JSON Page info
-                    history.pushState(state, state.title, state.url);
-                    PawnoKitPager.unloadCurrentPage();
-                    PawnoKitPager.loadPage(state.url);
-
-                });
-        });
-    }
-    
     window.onpopstate = function (e) {
         /*
         // просто сообщение
@@ -222,38 +186,8 @@ $(document).ready(function () {
             '<br/><b>state:</b> <span style="color: green;">' +
             JSON.stringify(history.state) + '</span><br/><br/>');
         */
-
-        // START LOADING JSON PAGE INFO
         PawnoKitPager.unloadCurrentPage();
         PawnoKitPager.loadPage(history.state.url);
     }
     
 });
-
-/*
-    NEXT PAGE INIT [NORMAL WORK]
-    PawnoKitPager.unloadCurrentPage();
-    PawnoKitPager.loadPage(PageJSONInfo);
-*/
-
-/*
-    FIRST PAGE INIT [HOLD START]
-
-    1.
-    <div id = "content">
-        Parse page content  
-    </div>
-
-    2.
-    <script>pagescript.js</script> <!-- Will be installed automatically, isScriptInstalled will be set as true -->
-    <link>style.css</link>
-    PawnoKitPager.loadedPageStylesUrls.push(url);
-    PawnoKitPager.loadedCssCount ++;
-    PawnoKitPager.isPageLoaded = true;
-*/
-
-/*
-(function () {
-    PawnoKitPager.install($("#content").get());
-})();
-*/
