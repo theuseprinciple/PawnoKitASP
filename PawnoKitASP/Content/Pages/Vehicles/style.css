@@ -1,82 +1,77 @@
-﻿#pk-quote{
-        text-align: right;
-        color: gray;
-    }
+﻿#content input[type=submit],
+input[type=button],
+button[type=submit],
+button[type=button] {
+    padding: 6px 16px;
+    border: 0;
+    border-bottom: 1px solid #496b93;
+    text-shadow: 0 1px 0 #5578A0;
+    background: #658ab0 url(http://st0.vk.me/images/button_bgf.png) repeat-x top;
+    background-position: 0px -12px;
+    color: #fff;
+    font-size: 11px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    border-radius: 2px;
+    outline: none;
+}
 
-    #pk-images {
-        margin-top: 10px;
-        text-align:center;
-    }
+#content input[type=submit]:hover,
+input[type=button]:hover,
+button[type=submit]:hover,
+button[type=button]:hover {
+    background-position: 0px -5px;
+    border-bottom-color: #4e7199;
+}
 
-    p#pk-title {
-        margin: 5px auto 0px auto;
-        padding: 5px;
-        text-align: center;
-        font-size: 25px; 
-    }
+#content input[type=submit]:active,
+input[type=button]:active,
+button[type=submit]:active,
+button[type=button]:active {
+    background: #5e80a5;
+    border-bottom-color: #51749c;
+    position: relative;
+}
+#content input[type='radio'] {
+    float:left;
+    opacity: 0;
+    height: 17px;
+    z-index: 99999;
+    position: relative;
+    cursor: pointer;
+    display: inline-block; 
+}
 
-    #pk-switch-language a{
-        display: block;
-    }
+#content input[type='radio'] + label {
+    margin: 0 0 2px;
+    background: url('http://sonnier.3dn.ru/radio_sprite.png') transparent no-repeat 0 0;
+    position: relative;
+    font-size: 11px;
+    font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    color: #636364;
+    cursor: pointer;
+    height: 17px;
+}
+ 
+#content input[type='radio']:checked + label {
+    background-position: 0 -18px;
+}
+
+label{  
+    display:block;   
+    padding-left: 30px;
+}
+
+label[for="allskins"]{  
+    display:block;   
+    padding-left: 20px;
+}
     
-    #pk-switch-language a img{
-        float:right;
-        height: 16px;
-    }
-
-    .news{
-        margin: 10px 5px 10px 5px;
-        font-weight: bold;
-        font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
-        font-size: 11px;
-        min-height: 62px;
-    }
-
-    .news .n-title{
-        font-weight: bold;
-        padding: 2px 2px 4px 0px;
-    }
-
-    .news .n-prevtext{
-        margin-left: 80px;
-        display: block;
-        font-weight: normal;
-    }
-
-    .news .n-text{
-        font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
-        font-size: 11px;
-        display: block;
-        color: #777777;
-    }
-
-    .news .n-footer{
-        border-bottom: 1px solid #EDEDED;
-        padding: 7px;
-        background: #FFFFFF;
-    }
-
-    .news .n-postdate{
-        font-size: 8px;
-        font-weight: normal;
-        display: inline;
-        margin-left: 5px;
-    }
-
-    .news .n-image{
-        clear: left;
-        float: left;
-        max-height:58px;
-        border: 1px solid gray;
-        padding: 2px; 
-        max-width: 100px;
-    }
-
-    .news .annotation{
-        font-size: 10px;
-        font-weight: bold;
-    }
-
-    .news ul li{
-        list-style-type:none;
-    }
+.zagolovok {
+    font-family: 'Courier New';
+    padding: 5px 0;
+    text-shadow: 2px 2px 1px #f0f0f0;
+    border-radius: 3px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #707281;
+}

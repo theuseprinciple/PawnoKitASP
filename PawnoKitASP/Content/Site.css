@@ -193,7 +193,7 @@ label[for="allskins"]{
     text-decoration: underline;
 }
 
-#aside-nav .menu .item .title{ /*Имя пункта меню*/
+#aside-nav .menu .item a{ /*Имя пункта меню*/
     font-weight: bold;
 }
 

@@ -1,0 +1,517 @@
+﻿
+@{
+    ViewBag.Title = "Guns";
+}
+
+<table class="wikitable" border="1" style="text-align:center;">
+    <tr>
+        <th scope="col" style="padding:10px;">
+            Weapon
+        </th>
+        <th scope="col" style="padding:10px;">
+            Define
+
+        </th>
+        <th scope="col" style="padding:10px;">
+            ID
+        </th>
+        <th scope="col" style="padding:10px;">
+            Slot
+        </th>
+        <th scope="col" style="padding:10px;">
+            Model
+        </th>
+        <th scope="col" style="padding:10px;">
+            Note
+        </th>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/9/9d/Weapon-0.gif" alt="Image:Weapon-0.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-0.gif" /><br />Fist</td>
+        <td>-</td>
+        <td>0</td>
+        <td>0</td>
+        <td>-</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/a0/Weapon-1.gif" alt="Image:Weapon-1.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-1.gif" /><br />Brass Knuckles</td>
+        <td>WEAPON_BRASSKNUCKLE</td>
+        <td>1</td>
+        <td>0</td>
+        <td>331</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/4/4c/Weapon-2.gif" alt="Image:Weapon-2.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-2.gif" /><br />Golf Club</td>
+        <td>WEAPON_GOLFCLUB</td>
+        <td>2</td>
+        <td>1</td>
+        <td>333</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/c/cc/Weapon-3.gif" alt="Image:Weapon-3.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-3.gif" /><br />Nightstick</td>
+        <td>WEAPON_NITESTICK</td>
+        <td>3</td>
+        <td>1</td>
+        <td>334</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/76/Weapon-4.gif" alt="Image:Weapon-4.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-4.gif" /><br />Knife</td>
+        <td>WEAPON_KNIFE</td>
+        <td>4</td>
+        <td>1</td>
+        <td>335</td>
+        <td>
+            Может рассинхронизировать игроков при перерезании горла (для других будет ползать трупом)
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/8b/Weapon-5.gif" alt="Image:Weapon-5.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-5.gif" /><br />Baseball Bat</td>
+        <td>WEAPON_BAT</td>
+        <td>5</td>
+        <td>1</td>
+        <td>336</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/f/f2/Weapon-6.gif" alt="Image:Weapon-6.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-6.gif" /><br />Shovel</td>
+        <td>WEAPON_SHOVEL</td>
+        <td>6</td>
+        <td>1</td>
+        <td>337</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/85/Weapon-7.gif" alt="Image:Weapon-7.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-7.gif" /><br />Pool Cue</td>
+        <td>WEAPON_POOLSTICK</td>
+        <td>7</td>
+        <td>1</td>
+        <td>338</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/3/30/Weapon-8.gif" alt="Image:Weapon-8.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-8.gif" /><br />Katana</td>
+        <td>WEAPON_KATANA</td>
+        <td>8</td>
+        <td>1</td>
+        <td>339</td>
+        <td>
+            Не может отрезать головы игрокам (как в одиночной игре)
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/4/46/Weapon-9.gif" alt="Image:Weapon-9.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-9.gif" /><br />Chainsaw</td>
+        <td>WEAPON_CHAINSAW</td>
+        <td>9</td>
+        <td>1</td>
+        <td>341</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/a6/Weapon-10.gif" alt="Image:Weapon-10.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-10.gif" /><br />Purple Dildo</td>
+        <td>WEAPON_DILDO</td>
+        <td>10</td>
+        <td>10</td>
+        <td>321</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/2/22/Weapon-11.gif" alt="Image:Weapon-11.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-11.gif" /><br />Dildo</td>
+        <td>WEAPON_DILDO2</td>
+        <td>11</td>
+        <td>10</td>
+        <td>322</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/f/ff/Weapon-12.gif" alt="Image:Weapon-12.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-12.gif" /><br />Vibrator</td>
+        <td>WEAPON_VIBRATOR</td>
+        <td>12</td>
+        <td>10</td>
+        <td>323</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/4/47/Weapon-13.gif" alt="Image:Weapon-13.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-13.gif" /><br />Silver Vibrator</td>
+        <td>WEAPON_VIBRATOR2</td>
+        <td>13</td>
+        <td>10</td>
+        <td>324</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/a6/Weapon-14.gif" alt="Image:Weapon-14.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-14.gif" /><br />Flowers</td>
+        <td>WEAPON_FLOWER</td>
+        <td>14</td>
+        <td>10</td>
+        <td>325</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/6/67/Weapon-15.gif" alt="Image:Weapon-15.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-15.gif" /><br />Cane</td>
+        <td>WEAPON_CANE</td>
+        <td>15</td>
+        <td>10</td>
+        <td>326</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/8b/Weapon-16.gif" alt="Image:Weapon-16.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-16.gif" /><br />Grenade</td>
+        <td>WEAPON_GRENADE</td>
+        <td>16</td>
+        <td>8</td>
+        <td>342</td>
+        <td>
+            Огонь не производит
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/c/c0/Weapon-17.gif" alt="Image:Weapon-17.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-17.gif" /><br />Tear Gas</td>
+        <td>WEAPON_TEARGAS</td>
+        <td>17</td>
+        <td>8</td>
+        <td>343</td>
+        <td>
+            Эффект кашля не создается
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/a9/Weapon-18.gif" alt="Image:Weapon-18.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-18.gif" /><br />Molotov Cocktail</td>
+        <td>WEAPON_MOLTOV</td>
+        <td>18</td>
+        <td>8</td>
+        <td>344</td>
+        <td>
+            Производит огонь
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/d/d2/Weapon-22.gif" alt="Image:Weapon-22.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-22.gif" /><br />9mm</td>
+        <td>WEAPON_COLT45</td>
+        <td>22</td>
+        <td>2</td>
+        <td>346</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/2/2b/Weapon-23.gif" alt="Image:Weapon-23.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-23.gif" /><br />Silenced 9mm</td>
+        <td>WEAPON_SILENCED</td>
+        <td>23</td>
+        <td>2</td>
+        <td>347</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/9/96/Weapon-24.gif" alt="Image:Weapon-24.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-24.gif" /><br />Desert Eagle</td>
+        <td>WEAPON_DEAGLE</td>
+        <td>24</td>
+        <td>2</td>
+        <td>348</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/0/05/Weapon-25.gif" alt="Image:Weapon-25.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-25.gif" /><br />Shotgun</td>
+        <td>WEAPON_SHOTGUN</td>
+        <td>25</td>
+        <td>3</td>
+        <td>349</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/c/c0/Weapon-26.gif" alt="Image:Weapon-26.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-26.gif" /><br />Sawnoff Shotgun</td>
+        <td>WEAPON_SAWEDOFF</td>
+        <td>26</td>
+        <td>3</td>
+        <td>350</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/f/f9/Weapon-27.gif" alt="Image:Weapon-27.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-27.gif" /><br />Combat Shotgun</td>
+        <td>WEAPON_SHOTGSPA</td>
+        <td>27</td>
+        <td>3</td>
+        <td>351</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/aa/Weapon-28.gif" alt="Image:Weapon-28.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-28.gif" /><br />Micro SMG/Uzi</td>
+        <td>WEAPON_UZI</td>
+        <td>28</td>
+        <td>4</td>
+        <td>352</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/0/0a/Weapon-29.gif" alt="Image:Weapon-29.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-29.gif" /><br />MP5</td>
+        <td>WEAPON_MP5</td>
+        <td>29</td>
+        <td>4</td>
+        <td>353</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/ad/Weapon-30.gif" alt="Image:Weapon-30.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-30.gif" /><br />AK-47</td>
+        <td>WEAPON_AK47</td>
+        <td>30</td>
+        <td>5</td>
+        <td>355</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/77/Weapon-31.gif" alt="Image:Weapon-31.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-31.gif" /><br />M4</td>
+        <td>WEAPON_M4</td>
+        <td>31</td>
+        <td>5</td>
+        <td>356</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/81/Weapon-32.gif" alt="Image:Weapon-32.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-32.gif" /><br />Tec-9</td>
+        <td>WEAPON_TEC9</td>
+        <td>32</td>
+        <td>4</td>
+        <td>372</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/c/c3/Weapon-33.gif" alt="Image:Weapon-33.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-33.gif" /><br />Country Rifle</td>
+        <td>WEAPON_RIFLE</td>
+        <td>33</td>
+        <td>6</td>
+        <td>357</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/8c/Weapon-34.gif" alt="Image:Weapon-34.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-34.gif" /><br />Sniper Rifle</td>
+        <td>WEAPON_SNIPER</td>
+        <td>34</td>
+        <td>6</td>
+        <td>358</td>
+        <td>
+            Скилл может быть установлен через SetPlayerSkillLevel
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/1/19/Weapon-35.gif" alt="Image:Weapon-35.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-35.gif" /><br />RPG</td>
+        <td>WEAPON_ROCKETLAUNCHER</td>
+        <td>35</td>
+        <td>7</td>
+        <td>359</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/8c/Weapon-36.gif" alt="Image:Weapon-36.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-36.gif" /><br />HS Rocket</td>
+        <td>WEAPON_HEATSEEKER</td>
+        <td>36</td>
+        <td>7</td>
+        <td>360</td>
+        <td>
+            Автонаводка не синхронизирована
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/76/Weapon-37.gif" alt="Image:Weapon-37.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-37.gif" /><br />Flamethrower</td>
+        <td>WEAPON_FLAMETHROWER</td>
+        <td>37</td>
+        <td>7</td>
+        <td>361</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/4/4a/Weapon-38.gif" alt="Image:Weapon-38.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-38.gif" /><br />Minigun</td>
+        <td>WEAPON_MINIGUN</td>
+        <td>38</td>
+        <td>7</td>
+        <td>362</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/8/84/Weapon-39.gif" alt="Image:Weapon-39.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-39.gif" /><br />Satchel Charge</td>
+        <td>WEAPON_SATCHEL</td>
+        <td>39</td>
+        <td>8</td>
+        <td>363</td>
+        <td>
+            Only synced for players that were streamed-in when the satchels were thrown
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/9/92/Weapon-40.gif" alt="Image:Weapon-40.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-40.gif" /><br />Detonator</td>
+        <td>WEAPON_BOMB</td>
+        <td>40</td>
+        <td>12</td>
+        <td>364</td>
+        <td>
+            Given automatically when players throw a satchel charge (omit from anti-cheat checks)
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/76/Weapon-41.gif" alt="Image:Weapon-41.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-41.gif" /><br />Spraycan</td>
+        <td>WEAPON_SPRAYCAN</td>
+        <td>41</td>
+        <td>9</td>
+        <td>365</td>
+        <td>
+            Players that are sprayed choke
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/0/02/Weapon-42.gif" alt="Image:Weapon-42.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-42.gif" /><br />Fire Extinguisher</td>
+        <td>WEAPON_FIREEXTINGUISHER</td>
+        <td>42</td>
+        <td>9</td>
+        <td>366</td>
+        <td>
+            Players that are sprayed choke
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/f/fa/Weapon-43.gif" alt="Image:Weapon-43.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-43.gif" /><br />Camera</td>
+        <td>WEAPON_CAMERA</td>
+        <td>43</td>
+        <td>9</td>
+        <td>367</td>
+        <td>
+            Saves photos to player's gallery if enabled via pause menu (My Documents\GTA San Andreas User Files\Gallery)
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/a/a8/Weapon-44.gif" alt="Image:Weapon-44.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-44.gif" /><br />Night Vis Goggles</td>
+        <td>-</td>
+        <td>44</td>
+        <td>11</td>
+        <td>368</td>
+        <td>
+            Визуальный эффект для всех игроков (можно исправить)
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/c/ce/Weapon-45.gif" alt="Image:Weapon-45.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-45.gif" /><br />Thermal Goggles</td>
+        <td>-</td>
+        <td>45</td>
+        <td>11</td>
+        <td>369</td>
+        <td>
+            Визуальный эффект для всех игроков (можно исправить)
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/75/Weapon-46.gif" alt="Image:Weapon-46.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-46.gif" /><br />Parachute</td>
+        <td>WEAPON_PARACHUTE</td>
+        <td>46</td>
+        <td>11</td>
+        <td>371</td>
+        <td>
+            Players will die if teleported while diving with a parachute (can be fixed using ResetPlayerWeapons).
+            <p>
+                Parachutes are given when bailing out of aircraft. (omit from anti-cheat checks)
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/79/Weapon-47.gif" alt="Image:Weapon-47.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-47.gif" /><br />Fake Pistol</td>
+        <td>-</td>
+        <td>47</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            ?
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/71/Weapon-49.gif" alt="Image:Weapon-49.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-49.gif" /><br />Vehicle</td>
+        <td>WEAPON_VEHICLE</td>
+        <td>49</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Иконка убийства. Не может использоваться в GivePlayerWeapon.
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/77/Weapon-50.gif" alt="Image:Weapon-50.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-50.gif" /><br />Helicopter Blades</td>
+        <td>-</td>
+        <td>50</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Иконка убийства. Не может использоваться в GivePlayerWeapon.
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/7/72/Weapon-51.gif" alt="Image:Weapon-51.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-51.gif" /><br />Explosion</td>
+        <td>-</td>
+        <td>51</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Иконка убийства. Не может использоваться в GivePlayerWeapon.
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/9/9a/Weapon-53.gif" alt="Image:Weapon-53.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-53.gif" /><br />Drowned</td>
+        <td>WEAPON_DROWN</td>
+        <td>53</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Иконка убийства. Не может использоваться в GivePlayerWeapon.
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/5/54/Weapon-54.gif" alt="Image:Weapon-54.gif" width="23" height="24" longdesc="/wiki/Image:Weapon-54.gif" /><br />Splat</td>
+        <td>WEAPON_COLLISION</td>
+        <td>54</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Иконка убийства. Не может использоваться в GivePlayerWeapon.
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/9/9f/Weapon-200.gif" alt="Image:Weapon-200.gif" width="21" height="24" longdesc="/wiki/Image:Weapon-200.gif" /><br />Connect</td>
+        <td>-</td>
+        <td>200</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Может использоваться только в SendDeathMessage
+        </td>
+    </tr>
+    <tr>
+        <td><img src="http://wiki.sa-mp.com/wroot/images2/f/fa/Weapon-201.gif" alt="Image:Weapon-201.gif" width="21" height="24" longdesc="/wiki/Image:Weapon-201.gif" /><br />Disconnect</td>
+        <td>-</td>
+        <td>201</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>
+            Может использоваться только в SendDeathMessage
+        </td>
+    </tr>
+</table>

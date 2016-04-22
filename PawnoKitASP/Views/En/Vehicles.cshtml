@@ -3,5 +3,38 @@
     ViewBag.Title = "Vehicles";
 }
 
-<h2>View</h2>
+<div class="zagolovok">Выберите категорию на вывод</div>
+<form name="submission" action="">
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="allvehicles" id="allvehicles">
+    <label for="allvehicles"><p>Весь транспорт</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="boats" id="boats">
+    <label for="boats"><p>Лодки</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="helicopters" id="helicopters">
+    <label for="helicopters"><p>Вертолеты</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="planes" id="planes">
+    <label for="planes"><p>Самолеты</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="bikes" id="bikes">
+    <label for="bikes"><p>Байки</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="sportcars" id="sportcars">
+    <label for="sportcars"><p>Спортивные авто</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="rc" id="rc">
+    <label for="rc"><p>RC Машинки</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="tuneonly" id="tuneonly">
+    <label for="tuneonly"><p>Доступные для тюнинга</p></label>
+
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="tuneonly_transfender" id="tuneonly_transfender">
+    <label for="tuneonly_transfender" class="tuneonly-sub"><p>Transfender</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="tuneonly_loco_low_co" id="tuneonly_loco_low_co">
+    <label for="tuneonly_loco_low_co" class="tuneonly-sub"><p>Loco Low Co</p></label>
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="tuneonly_wheel_arch_angels" id="tuneonly_wheel_arch_angels">
+    <label for="tuneonly_wheel_arch_angels" class="tuneonly-sub"><p>Wheel Arch Angels</p></label>
+
+    <INPUT TYPE="radio" NAME="vehiclechose" VALUE="notuneonly" id="normalskins">
+    <label for="normalskins"><p>Недоступные для тюнинга</p></label>
+    <button class="buttonS" type="submit">
+        Просмотр
+    </button>
+</form>
+<div id="OUT"></div>
+
 

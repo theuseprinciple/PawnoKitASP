@@ -211,6 +211,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pages\Guns\style.css" />
     <Content Include="Content\Pages\Index\style.css" />
     <Content Include="Content\Pages\Index\script.js" />
     <Content Include="Content\Pages\Skins\script.js" />
@@ -268,6 +269,7 @@
     <Content Include="Views\En\Index.cshtml" />
     <Content Include="Views\En\Skins.cshtml" />
     <Content Include="Views\En\Vehicles.cshtml" />
+    <Content Include="Views\En\Guns.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

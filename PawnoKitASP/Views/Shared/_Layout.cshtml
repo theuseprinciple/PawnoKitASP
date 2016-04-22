@@ -53,15 +53,14 @@
             <div id="aside-nav">
                 <div class="menu">
                     <div class="item">
-                        <a href="/" class="title">Главная</a>
+                        @Html.ActionLink("Главная", "Index")
                     </div>
                     <div class="item">
                         <a href="/ids" class="title">IDs</a>
                         <div class="submenu">
-                            <a href="/skins" title="Списки скинов">Списки скинов</a>
-                            <a href="/vehicles" title="Списки транспорта">Списки транспорта</a>
-
-                            <a href="/ids/guns" title="Список оружия">Список оружия</a>
+                            @Html.ActionLink("Списки скинов", "Skins")
+                            @Html.ActionLink("Списки транспорта", "Vehicles")
+                            @Html.ActionLink("Список оружия", "Guns")
                             
                             <a href="/ids/cars" title="Цвета транспорта">Цвета транспорта</a>
                             <a href="#">Иконки на карте</a>
