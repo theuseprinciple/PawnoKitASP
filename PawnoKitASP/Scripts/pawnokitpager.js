@@ -177,17 +177,11 @@ $(document).ready(function () {
     };
 
     history.replaceState(st, st.title, st.url); 
-
+    
     window.onpopstate = function (e) {
-        /*
-        // просто сообщение
-        appendText('<b>Вы вернулись на страницу:</b> ' +
-            '<span style="color: green;">' + history.location + '</span>' +
-            '<br/><b>state:</b> <span style="color: green;">' +
-            JSON.stringify(history.state) + '</span><br/><br/>');
-        */
         PawnoKitPager.unloadCurrentPage();
         PawnoKitPager.loadPage(history.state.url);
     }
     
+
 });
