@@ -212,6 +212,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Pages\Guns\style.css" />
+    <Content Include="Content\Pages\IDs\style.css" />
     <Content Include="Content\Pages\Index\style.css" />
     <Content Include="Content\Pages\Index\script.js" />
     <Content Include="Content\Pages\Skins\script.js" />
@@ -270,6 +271,19 @@
     <Content Include="Views\En\Skins.cshtml" />
     <Content Include="Views\En\Vehicles.cshtml" />
     <Content Include="Views\En\Guns.cshtml" />
+    <Content Include="Views\Shared\_ShowIDs.cshtml" />
+    <Content Include="Views\En\_ShowTools.cshtml" />
+    <Content Include="Views\En\Interiors.cshtml" />
+    <Content Include="Views\En\Pickups.cshtml" />
+    <Content Include="Views\En\Objects.cshtml" />
+    <Content Include="Views\En\Racecheckpoints.cshtml" />
+    <Content Include="Views\En\Paintjobs.cshtml" />
+    <Content Include="Views\En\Weathers.cshtml" />
+    <Content Include="Views\En\Explosions.cshtml" />
+    <Content Include="Views\En\Gametexts.cshtml" />
+    <Content Include="Views\En\Mapicons.cshtml" />
+    <Content Include="Views\En\Vehcolors.cshtml" />
+    <Content Include="Views\En\IDs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

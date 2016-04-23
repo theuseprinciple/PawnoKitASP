@@ -42,7 +42,7 @@ var PawnoKitPager = {
     },
 
     markStyleAsLoaded: function (styleUrl) {
-        this._loadedScriptUrl = styleUrl;
+        this._loadedStyleUrl = styleUrl;
         this._isStyleLoaded = true;
     },
 

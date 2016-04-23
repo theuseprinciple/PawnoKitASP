@@ -56,42 +56,12 @@
                         @Html.ActionLink("Главная", "Index")
                     </div>
                     <div class="item">
-                        <a href="/ids" class="title">IDs</a>
+                        @Html.ActionLink("IDs", "IDs")
                         <div class="submenu">
-                            @Html.ActionLink("Списки скинов", "Skins")
-                            @Html.ActionLink("Списки транспорта", "Vehicles")
-                            @Html.ActionLink("Список оружия", "Guns")
-                            
-                            <a href="/ids/cars" title="Цвета транспорта">Цвета транспорта</a>
-                            <a href="#">Иконки на карте</a>
-                            <a href="#">Виды GameText's</a>
-                            <a href="#">Виды взрывов</a>
-                            <a href="#">Виды погоды</a>
-                            <a href="#">Покрасочные работы</a>
-                            <a href="#">Гоночные чекпоинты</a>
-                            <a href="#">Объекты</a>
-                            <a href="#">Интерьеры</a>
-                            <a href="#">Типы пикапов</a>
+                            @Html.Partial("_ShowIDs")
                         </div>
                     </div>
-                    <div class="item">
-                        <a href="#" class="title">IDs</a>
-                        <div class="submenu">
-                            <a href="#">Список оружия</a>
-                            <a href="#">Списки скинов</a>
-                            <a href="#">Списки транспорта</a>
-                            <a href="#">Цвета транспорта</a>
-                            <a href="#">Иконки на карте</a>
-                            <a href="#">Виды GameText's</a>
-                            <a href="#">Виды взрывов</a>
-                            <a href="#">Виды погоды</a>
-                            <a href="#">Покрасочные работы</a>
-                            <a href="#">Гоночные чекпоинты</a>
-                            <a href="#">Объекты</a>
-                            <a href="#">Интерьеры</a>
-                            <a href="#">Менеджер клавиш (KeyFinder)</a>
-                        </div>
-                    </div>
+                    
                 </div> <!-- menu -->
             </div> <!-- Aside nav -->
         </div>
