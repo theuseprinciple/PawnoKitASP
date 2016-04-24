@@ -115,7 +115,7 @@ var PawnoKitPager = {
         $(this._parentalDiv).load(url, function (response, status, xhr) {
 
             if (status == "error") {
-                console.log("cannot load page: " + msg + xhr.status + " " + xhr.statusText);
+                console.log("cannot load page: " + xhr.status + " " + xhr.statusText);
                 return;
             }
 
@@ -147,7 +147,7 @@ var PawnoKitPager = {
             catch (e) { console.log("No scripts available to install found: " + e.toString()); }
 
             // hide all links in parental and hang clicks upon them
-            PawnoKit.improveLinks(this._parentalDiv + " a:not(.external)");
+            PawnoKit.improveLinks(/*this._parentalDiv.get() +*/"a:not(.external)");
 
             console.log("Page has been loaded from " + url);
         });

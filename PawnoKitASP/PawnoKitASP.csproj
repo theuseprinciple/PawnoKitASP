@@ -267,7 +267,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_AjaxLayout.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
-    <Content Include="Views\En\IDs\Index.cshtml" />
+    <Content Include="Views\En\Index.cshtml" />
     <Content Include="Views\En\IDs\Skins.cshtml" />
     <Content Include="Views\En\IDs\Vehicles.cshtml" />
     <Content Include="Views\En\IDs\Guns.cshtml" />
@@ -283,7 +283,7 @@
     <Content Include="Views\En\IDs\Gametexts.cshtml" />
     <Content Include="Views\En\IDs\Mapicons.cshtml" />
     <Content Include="Views\En\IDs\Vehcolors.cshtml" />
-    <Content Include="Views\En\IDs\IDs.cshtml" />
+    <Content Include="Views\En\IDs.cshtml" />
     <Content Include="Views\En\IDs\ClientCommands.cshtml" />
     <Content Include="Views\En\IDs\RconCommands.cshtml" />
   </ItemGroup>
