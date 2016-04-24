@@ -211,14 +211,14 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Pages\Guns\style.css" />
+    <Content Include="Content\Pages\IDs\Guns\style.css" />
     <Content Include="Content\Pages\IDs\style.css" />
     <Content Include="Content\Pages\Index\style.css" />
     <Content Include="Content\Pages\Index\script.js" />
-    <Content Include="Content\Pages\Skins\script.js" />
-    <Content Include="Content\Pages\Skins\style.css" />
-    <Content Include="Content\Pages\Vehicles\script.js" />
-    <Content Include="Content\Pages\Vehicles\style.css" />
+    <Content Include="Content\Pages\IDs\Skins\script.js" />
+    <Content Include="Content\Pages\IDs\Skins\style.css" />
+    <Content Include="Content\Pages\IDs\Vehicles\script.js" />
+    <Content Include="Content\Pages\IDs\Vehicles\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -287,6 +287,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Pages\IDs\Objects\" />
+    <Folder Include="Content\Pages\Tools\" />
     <Folder Include="Views\Pawnokit\" />
     <Folder Include="Views\Ru\IDs\" />
     <Folder Include="Views\Ru\Tools\" />
