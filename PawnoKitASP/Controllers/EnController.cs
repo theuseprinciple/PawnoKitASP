@@ -26,6 +26,8 @@ namespace PawnoKitASP.Controllers
         public ActionResult Objects() {         ViewBag.LibsPath = "/IDs"; return View(); }
         public ActionResult Interiors() {       ViewBag.LibsPath = "/IDs"; return View(); }
         public ActionResult Pickups() {         ViewBag.LibsPath = "/IDs"; return View(); }
+        public ActionResult ClientCommands() {  ViewBag.LibsPath = "/IDs"; return View(); }
+        public ActionResult RconCommands() {    ViewBag.LibsPath = "/IDs"; return View(); }
 
         public ActionResult Tools() {               ViewBag.LibsPath = "/Tools"; return View(); }
         public ActionResult StringSizeCounter() {   ViewBag.LibsPath = "/Tools"; return View(); }
