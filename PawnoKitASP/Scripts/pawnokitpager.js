@@ -94,7 +94,7 @@ var PawnoKitPager = {
 
             console.log("Script's been unloaded");
         }
-        else console.log("No any script installed to unload");
+        else console.log("Not any script installed to unload");
         
     },
     
@@ -106,7 +106,7 @@ var PawnoKitPager = {
 
             console.log("Style's been unloaded");
         }
-        else console.log("No any style installed to unload");
+        else console.log("Not any style installed to unload");
     },
 
     loadPage: function (url) {
@@ -147,7 +147,8 @@ var PawnoKitPager = {
             catch (e) { console.log("No scripts available to install found: " + e.toString()); }
 
             // hide all links in parental and hang clicks upon them
-            PawnoKit.improveLinks(/*this._parentalDiv.get() +*/"a:not(.external)");
+            PawnoKit.improveLinks('#' + $(self._parentalDiv).attr('id') + " > a:not(.external)");
+            console.log('#'+$(self._parentalDiv).attr('id') + " > a:not(.external)");
 
             console.log("Page has been loaded from " + url);
         });
