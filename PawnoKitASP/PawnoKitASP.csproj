@@ -211,7 +211,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Pages\IDs\Guns\style.css" />
     <Content Include="Content\Pages\IDs\style.css" />
     <Content Include="Content\Pages\Index\style.css" />
     <Content Include="Content\Pages\Index\script.js" />
@@ -292,6 +291,7 @@
     <Folder Include="Content\Pages\IDs\ClientCommands\" />
     <Folder Include="Content\Pages\IDs\Explosions\" />
     <Folder Include="Content\Pages\IDs\Gametexts\" />
+    <Folder Include="Content\Pages\IDs\Guns\" />
     <Folder Include="Content\Pages\IDs\Mapicons\" />
     <Folder Include="Content\Pages\IDs\Objects\" />
     <Folder Include="Content\Pages\IDs\Paintjobs\" />

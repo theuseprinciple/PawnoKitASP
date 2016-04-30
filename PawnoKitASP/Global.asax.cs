@@ -23,12 +23,26 @@ namespace PawnoKitASP
     }
     public class GetScriptAndStyleActionFilter : ActionFilterAttribute
     {
+        
         public override void OnResultExecuting(ResultExecutingContext filterContext)
         {
             string pathHeader = "/Content/Pages";
-            filterContext.Controller.ViewBag.StyleUrl = String.Format("{0}/{1}/style.css", pathHeader, filterContext.RouteData.Values["action"]);
-            filterContext.Controller.ViewBag.ScriptUrl = String.Format("{0}/{1}/script.js", pathHeader, filterContext.RouteData.Values["action"]);
+            filterContext.Controller.ViewBag.StyleUrl = String.Format("{0}{1}{2}/style.css", pathHeader, filterContext.Controller.ViewBag.LibsPath, filterContext.RouteData.Values["action"]);
+            filterContext.Controller.ViewBag.ScriptUrl = String.Format("{0}{1}{2}/script.js", pathHeader, filterContext.Controller.ViewBag.LibsPath, filterContext.RouteData.Values["action"]);
         }
+        
+
+            /*
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            string pathHeader = "/Content/Pages";
+            filterContext.Controller.ViewBag.StyleUrl = String.Format("{0}{1}/{2}/style.css", pathHeader, filterContext.RouteData.Values["action"]);
+            filterContext.Controller.ViewBag.ScriptUrl = String.Format("{0}{1}/{2}/script.js", pathHeader, filterContext.RouteData.Values["action"]);
+
+            base.OnActionExecuting(filterContext);
+        }
+        */
+
         /*
         public class GettingScriptsAndStylesActionFilter : ActionFilterAttribute
         {
