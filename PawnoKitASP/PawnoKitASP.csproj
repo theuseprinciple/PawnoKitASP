@@ -204,7 +204,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\PageJSONInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -218,6 +217,7 @@
     <Content Include="Content\Pages\IDs\Skins\style.css" />
     <Content Include="Content\Pages\IDs\Vehicles\script.js" />
     <Content Include="Content\Pages\IDs\Vehicles\style.css" />
+    <Content Include="Content\Pages\Tools\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -271,7 +271,7 @@
     <Content Include="Views\En\IDs\Vehicles.cshtml" />
     <Content Include="Views\En\IDs\Guns.cshtml" />
     <Content Include="Views\Shared\_ShowIDs.cshtml" />
-    <Content Include="Views\En\_ShowTools.cshtml" />
+    <Content Include="Views\Shared\_ShowTools.cshtml" />
     <Content Include="Views\En\IDs\Interiors.cshtml" />
     <Content Include="Views\En\IDs\Pickups.cshtml" />
     <Content Include="Views\En\IDs\Objects.cshtml" />
@@ -285,6 +285,14 @@
     <Content Include="Views\En\IDs.cshtml" />
     <Content Include="Views\En\IDs\ClientCommands.cshtml" />
     <Content Include="Views\En\IDs\RconCommands.cshtml" />
+    <Content Include="Views\En\Tools.cshtml" />
+    <Content Include="Views\En\Tools\StringSizeCounter.cshtml" />
+    <Content Include="Views\En\Tools\ColorCreator.cshtml" />
+    <Content Include="Views\En\Tools\TextureManager.cshtml" />
+    <Content Include="Views\En\Tools\DialogCreator.cshtml" />
+    <Content Include="Views\En\Tools\CommandCreator.cshtml" />
+    <Content Include="Views\En\Tools\KeyFinder.cshtml" />
+    <Content Include="Views\En\Tools\SoundManager.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,7 +307,6 @@
     <Folder Include="Content\Pages\IDs\Racecheckpoints\" />
     <Folder Include="Content\Pages\IDs\RconCommands\" />
     <Folder Include="Content\Pages\IDs\Weathers\" />
-    <Folder Include="Content\Pages\Tools\" />
     <Folder Include="Views\Pawnokit\" />
     <Folder Include="Views\Ru\IDs\" />
     <Folder Include="Views\Ru\Tools\" />

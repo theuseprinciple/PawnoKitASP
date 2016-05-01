@@ -40,11 +40,20 @@ namespace PawnoKitASP.Controllers
         public ActionResult SoundManager() {            ViewBag.LibsPath = "/Tools/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
         //public ActionResult GametextConverter() { return View(); }
 
-        public ActionResult MainInfo() { return View(); }
-        public ActionResult Limits() { return View(); }
+        public ActionResult MainInfo() {                ViewBag.LibsPath = "/"; return View(); }
+        public ActionResult Limits() {                  ViewBag.LibsPath = "/MainInfo/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
 
-        public ActionResult Library() { return View(); }
+        public ActionResult Library() {                 ViewBag.LibsPath = "/"; return View(); }
+        public ActionResult dZCMD() {                   return Redirect("vk.com/ts_samp"); }
+        public ActionResult dYSI() {                    return Redirect("vk.com/ts_samp"); }
+        public ActionResult dForeach() {                return Redirect("vk.com/ts_samp"); }
+        public ActionResult dSscanf() {                 return Redirect("vk.com/ts_samp"); }
+        public ActionResult dMxINI() {                  return Redirect("vk.com/ts_samp"); }
+        public ActionResult dColors() {                 return Redirect("vk.com/ts_samp"); }
+        public ActionResult dStreamer() {               return Redirect("vk.com/ts_samp"); }
+        public ActionResult dMySQL() {                  return Redirect("vk.com/ts_samp"); }
 
-        public ActionResult DownloadSAMP() { return View(); }
+        public ActionResult DownloadSAMP() {            ViewBag.LibsPath = "/"; return View(); }
+        public ActionResult AllServerVersions() {       ViewBag.LibsPath = "/DownloadSAMP/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
     }
 }
