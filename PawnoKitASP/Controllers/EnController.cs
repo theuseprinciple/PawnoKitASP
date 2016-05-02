@@ -44,14 +44,16 @@ namespace PawnoKitASP.Controllers
         public ActionResult Limits() {                  ViewBag.LibsPath = "/MainInfo/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
 
         public ActionResult Library() {                 ViewBag.LibsPath = "/"; return View(); }
-        public ActionResult dZCMD() {                   return Redirect("vk.com/ts_samp"); }
-        public ActionResult dYSI() {                    return Redirect("vk.com/ts_samp"); }
-        public ActionResult dForeach() {                return Redirect("vk.com/ts_samp"); }
-        public ActionResult dSscanf() {                 return Redirect("vk.com/ts_samp"); }
-        public ActionResult dMxINI() {                  return Redirect("vk.com/ts_samp"); }
-        public ActionResult dColors() {                 return Redirect("vk.com/ts_samp"); }
-        public ActionResult dStreamer() {               return Redirect("vk.com/ts_samp"); }
-        public ActionResult dMySQL() {                  return Redirect("vk.com/ts_samp"); }
+        /*
+        public ActionResult dZCMD() {                   return RedirectPermanent("http://vk.com/ts_samp"); }
+        public ActionResult dYSI() {                    return RedirectPermanent("vk.com/ts_samp"); }
+        public ActionResult dForeach() {                return RedirectPermanent("vk.com/ts_samp"); }
+        public ActionResult dSscanf() {                 return RedirectPermanent("vk.com/ts_samp"); }
+        public ActionResult dMxINI() {                  return RedirectPermanent("vk.com/ts_samp"); }
+        public ActionResult dColors() {                 return RedirectPermanent("vk.com/ts_samp"); }
+        public ActionResult dStreamer() {               return RedirectPermanent("vk.com/ts_samp"); }
+        public ActionResult dMySQL() {                  return RedirectPermanent("vk.com/ts_samp"); }
+        */
 
         public ActionResult DownloadSAMP() {            ViewBag.LibsPath = "/"; return View(); }
         public ActionResult AllServerVersions() {       ViewBag.LibsPath = "/DownloadSAMP/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }

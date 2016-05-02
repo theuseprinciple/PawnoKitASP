@@ -293,6 +293,9 @@
     <Content Include="Views\En\Tools\CommandCreator.cshtml" />
     <Content Include="Views\En\Tools\KeyFinder.cshtml" />
     <Content Include="Views\En\Tools\SoundManager.cshtml" />
+    <Content Include="Views\Shared\_ShowLibs.cshtml" />
+    <Content Include="Views\En\Library.cshtml" />
+    <Content Include="Views\Ru\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,6 +310,13 @@
     <Folder Include="Content\Pages\IDs\Racecheckpoints\" />
     <Folder Include="Content\Pages\IDs\RconCommands\" />
     <Folder Include="Content\Pages\IDs\Weathers\" />
+    <Folder Include="Content\Pages\Tools\ColorCreator\" />
+    <Folder Include="Content\Pages\Tools\CommandCreator\" />
+    <Folder Include="Content\Pages\Tools\DialogCreator\" />
+    <Folder Include="Content\Pages\Tools\KeyFinder\" />
+    <Folder Include="Content\Pages\Tools\SoundManager\" />
+    <Folder Include="Content\Pages\Tools\StringSizeCounter\" />
+    <Folder Include="Content\Pages\Tools\TextureManager\" />
     <Folder Include="Views\Pawnokit\" />
     <Folder Include="Views\Ru\IDs\" />
     <Folder Include="Views\Ru\Tools\" />

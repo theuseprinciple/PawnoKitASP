@@ -13,42 +13,29 @@ namespace PawnoKitASP.Controllers
         
         public ActionResult Index()
         {
-            /*
-            // get styles
-            var pfPaths = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.css");
-
-            List<string> names = null;
-            if (pfPaths.Count() > 0)
+            string controllerName = "En";
+            if (Request.Cookies["UserLanguage"] != null)
             {
-                names = new List<string>();
-                foreach (var pfP in pfPaths)
-                {
-                    names.Add(Url.Content(String.Format("~/Content/Pages/Index/{0}", Path.GetFileName(pfP))));
-                }
-            }
-            ViewBag.StylesUrls = names;
-
-            // get script
-            pfPaths = Directory.EnumerateFiles(System.Web.HttpContext.Current.Server.MapPath("~/Content/Pages/Index"), "*.js");
-            if(pfPaths.Count() > 0)
-            {
-                string path = pfPaths.First();
-                ViewBag.ScriptUrl = Url.Content(String.Format("~/Content/Pages/Index/{0}", Path.GetFileName(path)));
+                controllerName = Request.Cookies["UserLanguage"].ToString();
             }
             else
             {
-                ViewBag.ScriptUrl = null;
+                // get OS language
+                // redirect to a suitable controller
             }
-           */
-            return View();
+
+            return RedirectToActionPermanent("Index", controllerName);
+            //return View();
         }
 
+        /*
         public ActionResult Error(int id)
         {
             Response.StatusCode = id;
 
             return View();
         }
+        */
     }
 
     
