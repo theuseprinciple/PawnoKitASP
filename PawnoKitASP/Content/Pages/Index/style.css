@@ -80,3 +80,20 @@
     .news ul li{
         list-style-type:none;
     }
+
+    #content{
+overflow: hidden;
+height: 100%;
+}    body{
+        overflow: hidden;
+    }#vk_groups{
+    margin-top:20px;
+    /*height:95%;*/
+    /*
+width: 95%;
+border: 1px solid #DAE1E8;
+overflow:scroll; 
+overflow:scroll; 
+overflow-x:hidden;
+height:95%;*/
+}
