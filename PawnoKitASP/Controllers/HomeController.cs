@@ -13,18 +13,38 @@ namespace PawnoKitASP.Controllers
         
         public ActionResult Index()
         {
-            string controllerName = "En";
-            if (Request.Cookies["UserLanguage"] != null)
+            /*
+            string controllerName = "en";
+
+            HttpCookie cookie = Request.Cookies["UserLanguage"];
+
+            if (cookie != null)
             {
-                controllerName = Request.Cookies["UserLanguage"].ToString();
+                controllerName = cookie["UserLanguage"];
             }
             else
             {
                 // get OS language
                 // redirect to a suitable controller
+                var userLangs = Request.UserLanguages;
+                controllerName = userLangs[0].Substring(0,2);
+                switch(controllerName)
+                {
+                    case "ru":
+                        break;
+                    default:
+                        controllerName = "en";
+                        break;
+                }
             }
 
             return RedirectToActionPermanent("Index", controllerName);
+            *
+            * ////////
+            * 
+            */
+
+            return View();
             //return View();
         }
 

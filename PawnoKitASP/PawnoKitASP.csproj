@@ -210,6 +210,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pages\DownloadSAMP\style.css" />
     <Content Include="Content\Pages\IDs\style.css" />
     <Content Include="Content\Pages\Index\style.css" />
     <Content Include="Content\Pages\Index\script.js" />
@@ -217,6 +218,8 @@
     <Content Include="Content\Pages\IDs\Skins\style.css" />
     <Content Include="Content\Pages\IDs\Vehicles\script.js" />
     <Content Include="Content\Pages\IDs\Vehicles\style.css" />
+    <Content Include="Content\Pages\Libs\style.css" />
+    <Content Include="Content\Pages\MainInfo\style.css" />
     <Content Include="Content\Pages\Tools\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -296,6 +299,11 @@
     <Content Include="Views\Shared\_ShowLibs.cshtml" />
     <Content Include="Views\En\Library.cshtml" />
     <Content Include="Views\Ru\Index.cshtml" />
+    <Content Include="Views\Shared\_ShowDownloadSAMP.cshtml" />
+    <Content Include="Views\En\DownloadSAMP.cshtml" />
+    <Content Include="Views\Shared\_ShowMainInfo.cshtml" />
+    <Content Include="Views\En\MainInfo.cshtml" />
+    <Content Include="Views\En\MainInfo\Limits.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

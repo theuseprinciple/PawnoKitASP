@@ -62,17 +62,34 @@
                         </div>
                     </div>
                     <div class="item">
-                        @Html.ActionLink("Tools", "Tools")
+                        @Html.ActionLink("Сервисы", "Tools")
                         <div class="submenu">
                             @Html.Partial("_ShowTools")
                         </div>
                     </div>
+                    
                     <div class="item">
-                        @Html.ActionLink("Libs", "Library")
+                        @Html.ActionLink("Общая информация", "MainInfo")
+                        <div class="submenu">
+                            @Html.Partial("_ShowMainInfo")
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        @Html.ActionLink("Библиотека", "Library")
                         <div class="submenu">
                             @Html.Partial("_ShowLibs")
                         </div>
                     </div>
+
+                    <div class="item">
+                        @Html.ActionLink("Загрузить SA-MP", "Library")
+                        <div class="submenu">
+                            @Html.Partial("_ShowDownloadSAMP")
+                        </div>
+                    </div>
+
+                    
                     
                 </div> <!-- menu -->
             </div> <!-- Aside nav -->

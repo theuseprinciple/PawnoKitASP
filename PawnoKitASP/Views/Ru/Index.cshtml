@@ -13,12 +13,12 @@
 <blockquote id="pk-quote">Все для скриптинга,<br />Всегда под рукой</blockquote>
 
 <div id="module"></div>
-
+@Url.Action()
 <div id="pk-switch-language">
-    <a href="https://app.pawnokit.ru.swtest.ru/en/">
+    <a href="@Url.Action("Index", "en")" class="external">
         <img src="//app.pawnokit.ru.swtest.ru/United-Kingdom.png" title="English Language" />
     </a>
-    <a href="https://app.pawnokit.ru.swtest.ru/">
+    <a href="@Url.Action("Index", "ru")" class="external">
         <img src="//app.pawnokit.ru.swtest.ru/Russia.png" title="Russian Language" />
     </a>
 </div>

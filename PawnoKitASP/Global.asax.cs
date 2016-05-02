@@ -37,7 +37,19 @@ namespace PawnoKitASP
             string pathHeader = "/Content/Pages";
             filterContext.Controller.ViewBag.StyleUrl = String.Format("{0}{1}{2}/style.css", pathHeader, filterContext.Controller.ViewBag.LibsPath, filterContext.RouteData.Values["action"]);
             filterContext.Controller.ViewBag.ScriptUrl = String.Format("{0}{1}{2}/script.js", pathHeader, filterContext.Controller.ViewBag.LibsPath, filterContext.RouteData.Values["action"]);
-            //filterContext.HttpContext.Response.SetCookie(new HttpCookie("UserLanguage", filterContext.RouteData.Values["controller"].ToString()));
+            /*
+            string requestedController = filterContext.RouteData.Values["controller"].ToString();
+            switch(requestedController)
+            {
+                case "ru":
+                case "en":
+                    filterContext.HttpContext.Response.SetCookie(new HttpCookie("UserLanguage", requestedController));
+                    break;
+                default:
+                    filterContext.HttpContext.Response.SetCookie(new HttpCookie("UserLanguage", "en"));
+                    break;
+            }
+            */
         }
         
 

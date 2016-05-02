@@ -56,6 +56,6 @@ namespace PawnoKitASP.Controllers
         */
 
         public ActionResult DownloadSAMP() {            ViewBag.LibsPath = "/"; return View(); }
-        public ActionResult AllServerVersions() {       ViewBag.LibsPath = "/DownloadSAMP/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
+        //public ActionResult AllServerVersions() {       ViewBag.LibsPath = "/DownloadSAMP/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
     }
 }
