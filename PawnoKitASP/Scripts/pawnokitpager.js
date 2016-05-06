@@ -110,7 +110,6 @@ var PawnoKitPager = {
     },
 
     loadPage: function (url) {
-
         var self = this;
         $(this._parentalDiv).load(url, function (response, status, xhr) {
 

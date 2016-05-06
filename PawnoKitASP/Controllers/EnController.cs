@@ -10,6 +10,7 @@ namespace PawnoKitASP.Controllers
     {
         public static string pathHeader = "~/Views/En";
 
+        // ужас, но на первое время сойдет
         // GET: En
         public ActionResult Index() {                   ViewBag.LibsPath = "/"; return View(); }
 
@@ -38,7 +39,7 @@ namespace PawnoKitASP.Controllers
         public ActionResult CommandCreator() {          ViewBag.LibsPath = "/Tools/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
         public ActionResult KeyFinder() {               ViewBag.LibsPath = "/Tools/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
         public ActionResult SoundManager() {            ViewBag.LibsPath = "/Tools/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
-        //public ActionResult GametextConverter() { return View(); }
+        public ActionResult GametextConverter() {       ViewBag.LibsPath = "/Tools/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
 
         public ActionResult MainInfo() {                ViewBag.LibsPath = "/"; return View(); }
         public ActionResult Limits() {                  ViewBag.LibsPath = "/MainInfo/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }

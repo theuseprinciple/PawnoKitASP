@@ -1,7 +1,37 @@
 ﻿
 @{
-    ViewBag.Title = "ColorCreator";
+    ViewBag.Title = "Генератор цвета";
 }
 
-<h2>ColorCreator</h2>
+<span id="m_yovesaved" data-pkmessage="Я сохранил цвет в приложении PawnoKit!\n\n\
+HEX стиль: {0}\n\
+0xRGBA стиль: {1}" />
 
+
+<p>
+    Нажми сюда:
+    <input class="jscolor {onFineChange:'updateColor(this)'}" value="66FF00">
+</p>
+<br />
+
+<h3>HEX: <span class="chosencolor">66FF00</span></h3>
+<br />
+Подходит для раскраски отдельного текста. Пример использования:
+<div class="code">
+    SendClientMessage(playerid, -1, "Введите текст {<span class="chosencolor">66FF00</span>}сообщения");
+</div>
+<br />
+
+<h3>0xRGBA: 0x<span class="chosencolor">66FF00</span>FF</h3>
+<br />
+
+Может восприниматься как число. <br />
+Подходит для раскраски всего текста сразу. Пример использования:<br />
+<div class="code">
+    SendClientMessage(playerid, 0x<span class="chosencolor">66FF00</span>FF, "Введите текст сообщения");
+</div>
+<br />
+
+<button class="buttonS" type="submit" onclick="SaveCurrentColor()">
+    Сохранить
+</button>

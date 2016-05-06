@@ -43,8 +43,13 @@ body {
 	margin: 0 auto;
 }
 
+.code{
+    border: 1px solid black;
+    background-color:whitesmoke;
+    padding: 15px;
+    font-family: Courier New, Courier, monospace;
+}
 
-/*
 #content input[type=submit],
 input[type=button],
 button[type=submit],
@@ -102,7 +107,7 @@ button[type=button]:active {
 #content input[type='radio']:checked + label {
     background-position: 0 -18px;
 }
-
+/*
 label{  
     display:block;   
     padding-left: 30px;
