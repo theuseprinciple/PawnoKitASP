@@ -43,7 +43,8 @@
                 xmlhttp.send(null);
                 return false;
             });
-        });        String.prototype.format = function () {
+        });
+        String.prototype.format = function () {
             var formatted = this;
             for (var i = 0; i < arguments.length; i++) {
                 var regexp = new RegExp('\\{' + i + '\\}', 'gi');
@@ -77,7 +78,8 @@
                 message: myMessage
             }, function (data) { });
 
-        }
+        }
+
     },
     Uninstall: function () {
 

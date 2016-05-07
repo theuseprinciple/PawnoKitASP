@@ -147,7 +147,7 @@ var PawnoKitPager = {
 
             // hide all links in parental and hang clicks upon them
             PawnoKit.improveLinks('#' + $(self._parentalDiv).attr('id') + " > a:not(.external)");
-            console.log('#'+$(self._parentalDiv).attr('id') + " > a:not(.external)");
+            //console.log('#'+$(self._parentalDiv).attr('id') + " > a:not(.external)");
 
             console.log("Page has been loaded from " + url);
         });
@@ -179,9 +179,24 @@ $(document).ready(function () {
     history.replaceState(st, st.title, st.url); 
     
     window.onpopstate = function (e) {
-        PawnoKitPager.unloadCurrentPage();
-        PawnoKitPager.loadPage(history.state.url);
-    }
+        try
+        {
+            if (history.state.url != null)
+            {
+                PawnoKitPager.unloadCurrentPage();
+                PawnoKitPager.loadPage(history.state.url);
+            }
+        }
+        catch(e)
+        {
+
+        }
+    };
+
+    //window.onanchorchange = function(){
+    //    console.log("hash changed:" + History.getHash()); 
+    //};
+
     
 
 });

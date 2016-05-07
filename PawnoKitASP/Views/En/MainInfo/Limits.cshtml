@@ -1,7 +1,326 @@
 ﻿
 @{
-    ViewBag.Title = "Limits";
+    ViewBag.Title = "Лимиты";
 }
+<div id="hrefRemoval">
+    <table class="wikitable">
 
-<h2>Limits</h2>
+        <tr>
+            <th>
+                Скриптинг
+            </th>
+            <th>
+                0.3.7
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Игроки
+            </td>
+            <td>
+                1000
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/CreateVehicle" title="CreateVehicle">Машины</a> ✝✝
+            </td>
+            <td>
+                2000
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/GetVehicleModel" title="GetVehicleModel">Модели машин</a>
+            </td>
+            <td>
+                Неограниченно **
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/CreateObject" title="CreateObject">Объекты</a> ✝✝
+            </td>
+            <td>
+                1000
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPlayerVirtualWorld" title="SetPlayerVirtualWorld">Виртуальные миры</a>
+            </td>
+            <td>
+                2,147,483,647
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPlayerMapIcon" title="SetPlayerMapIcon">Иконки на карте</a> ✝✝
+            </td>
+            <td>
+                100
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPlayerRaceCheckpoint" title="SetPlayerRaceCheckpoint">Гоночные чекпоинты</a> ✝✝
+            </td>
+            <td>
+                1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPlayerCheckpoint" title="SetPlayerCheckpoint">Чекпоинты</a> ✝✝
+            </td>
+            <td>
+                1
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/CreatePickup" title="CreatePickup">Пикапы</a> ✝✝
+            </td>
+            <td>
+                4096
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/Create3DTextLabel" title="Create3DTextLabel">Общие 3D метки</a> ✝✝
+            </td>
+            <td>
+                1024
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/CreatePlayer3DTextLabel" title="CreatePlayer3DTextLabel">3D метки игроков</a> ✝✝
+            </td>
+            <td>
+                1024
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPlayerChatBubble" title="SetPlayerChatBubble">Строка Chat Bubble</a>
+            </td>
+            <td>
+                144 символа
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/GangZoneCreate" title="GangZoneCreate">Зоны банд</a>
+            </td>
+            <td>
+                1024
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/CreateMenu" title="CreateMenu">Меню</a>
+            </td>
+            <td>
+                128
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPlayerAttachedObject" title="SetPlayerAttachedObject">Прикрепленные к игроку объекты</a>
+            </td>
+            <td>
+                10
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/SetPVarInt" title="SetPVarInt">Переменные игрока</a>
+            </td>
+            <td>
+                800
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/CreateActor" title="CreateActor">Актёры</a> (начиная с 0.3.7) ✝✝
+            </td>
+            <td>
+                1000
+            </td>
+        </tr>
 
+
+        <tr>
+            <th>
+                Сервер
+            </th>
+            <th>
+                0.3.7
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Гейммоды
+            </td>
+            <td>
+                16
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Фильтрскрипты
+            </td>
+            <td>
+                16
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ввод и вывод текста (чат и команды)
+            </td>
+            <td>
+                128 ячеек (512 байт)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Длина ника (<a href="/wiki/SetPlayerName" title="SetPlayerName">SetPlayerName</a>)
+            </td>
+            <td>
+                24 символа
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <a href="/wiki/TextDrawCreate" title="TextDrawCreate">Textdraws</a>
+            </th>
+            <th>
+                0.3.7
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Длина строки
+            </td>
+            <td>
+                1024 символов ***
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Отображаемые на экране игрока
+            </td>
+            <td>
+                2048 + 256 ✝
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Отображаемые на экране игрока (спрайты)
+            </td>
+            <td>
+                100
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Созданные на сервере (<a href="/wiki/TextDrawCreate" title="TextDrawCreate">Глобальные</a>)
+            </td>
+            <td>
+                2048
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Созданные на сервере (<a href="/wiki/CreatePlayerTextDraw" title="CreatePlayerTextDraw">Для игроков</a>)
+            </td>
+            <td>
+                256
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <a href="/wiki/ShowPlayerDialog" title="ShowPlayerDialog">Диалоги</a>
+            </th>
+            <th>
+                0.3.7
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <a href="/wiki/ShowPlayerDialog" title="ShowPlayerDialog">ID диалогов</a>
+            </td>
+            <td>
+                32767
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Информация (Основной текст)
+            </td>
+            <td>
+                4096
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Заголовок
+            </td>
+            <td>
+                64
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Вводимый текст (DIALOG_STYLE_INPUT/PASSWORD)
+            </td>
+            <td>
+                128
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Столбцов (DIALOG_STYLE_TABLIST(_HEADERS)
+            </td>
+            <td>
+                4
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Символов в столбце (DIALOG_STYLE_TABLIST(_HEADERS)
+            </td>
+            <td>
+                128
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Символов в строке (DIALOG_STYLE_TABLIST(_HEADERS)
+            </td>
+            <td>
+                256
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    <b>Примечания:</b>
+</p>
+<ul>
+    <li>
+        (**) Несмотря на то, что лимит моделей транспорта в версии 0.3 неограничен, если у вас большое количество транспорта, вы можете заметить, как транспорт динамически выгружается/загружается. Рекомендуется использовать не более, чем 150 видов моделей транспорта.
+    </li>
+    <li>
+        (***) Несмотря на то, что максимальное количество символов в TextDraw - это 1024, использование <a href="http://wiki.sa-mp.com/wiki/GameTextStyle#Text_Colors" class='external' target="_blank" title="http://wiki.sa-mp.com/wiki/GameTextStyle#Text_Colors" rel="nofollow">цветовых кодов</a> (например ~г~) за пределами 255 символа может уронить клиент.
+    </li>
+    <li>
+        (✝) Можно показать все серверные Textdraw и все PlayerTextDraw в одно время для одного игрока. (не рекомендуется)
+    </li>
+    <li>
+        (✝✝) Для обхода этих ограничений можно использовать стример. Стримеры создают объекты, транспорт и прочие вещи только там, где поблизости находятся игроки. Смотрите это: <a href="http://forum.sa-mp.com/showthread.php?t=102865" class='external' target="_blank" title="http://forum.sa-mp.com/showthread.php?t=102865" rel="nofollow">здесь</a> (транспорт и актёры не поддерживаются, но и для них есть стримеры).
+    </li>
+</ul>
+
+Оригинал статьи на <a href="http://wiki.sa-mp.com/wiki/Лимиты_RU" class="external" target="_blank">wiki.sa-mp.com</a>

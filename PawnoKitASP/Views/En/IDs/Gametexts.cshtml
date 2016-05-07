@@ -1,7 +1,124 @@
 ﻿
 @{
-    ViewBag.Title = "Gametexts";
+    ViewBag.Title = "Виды GameText";
 }
+<iframe width="570" height="325" src="//www.youtube.com/embed/LAQXezuh5_k?rel=0" frameborder="0" allowfullscreen></iframe>
 
-<h2>Gametexts</h2>
+<table border="1" cellspacing="0" cellpadding="5">
+    <br />
+    <h2>Константы цветов</h2>
+    <tr>
+        <th> <b>Константа</b> </th>
+        <th> <b>Описание</b></th>
+    </tr>
+    <tr> <td>~n~</td> <td>Новая линия</td> </tr>
+    <tr> <td>~r~</td> <td>Красный</td> </tr>
+    <tr> <td>~g~</td> <td>Зеленый</td> </tr>
+    <tr> <td>~b~</td> <td>Синий</td> </tr>
+    <tr> <td>~w~</td> <td>Белый</td> </tr>
+    <tr> <td>~y~</td> <td>Жёлтый</td> </tr>
+    <tr> <td>~l~</td> <td>Черный</td> </tr>
+    <tr> <td>~h~</td> <td>Сделать цвет бледнее (использование многократно сделает цвет белым, не работает с черным)</td> </tr>
 
+    </tr>
+    <td>
+        <div class="code">
+            <pre>
+if(strcmp(cmd, "/gtforme", true) == 0) {
+    GameTextForPlayer(playerid, \
+	"~r~Red text\
+	~n~~y~Yellow Text\
+	~n~~g~Green text\
+	~n~~w~White text\
+	~n~~p~Purple Text\
+	~n~~l~Black text~n~~b~Blue text\
+	~n~~b~~h~Less blue text", \
+	2000, 5);
+    return 1;
+} 
+        </pre>
+        </div>
+    </td>
+    <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/cgt.jpg"></td>
+    </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <br />
+    <h2>Специальные символы</h2>
+    <tr>
+        <th> <b>Константа</b> </th>
+        <th> <b>Описание</b></th>
+    </tr>
+
+    <tr> <td>~u~</td> <td>Стрелочка вверх</td> </tr>
+    <tr> <td>~s~</td> <td>Стрелочка вниз</td> </tr>
+    <tr> <td>~<~</td> <td>Стрелочка влево</td> </tr>
+    <tr> <td>~>~</td> <td>Стрелочка вправо</td> </tr>
+    <tr> <td>~]~</td> <td>Звездочка (только для стилей 3, 4 и 5)</td> </tr>
+    <tr> <td>~k~</td> <td>Экранировать название клавиши (как ~k~~VEHICLE_TURRETLEFT~ / k~~PED_FIREWEAPON~) <br />Посмотреть можно <a href="http://wiki.sa-mp.com/wiki/Keys" class="external" target="_blank">здесь</a></td> </tr>
+
+    </tr>
+    <td>
+        <div class="code">
+            <pre>
+if(strcmp(cmd, "/gtforme2", true) == 0) {
+    GameTextForPlayer(playerid, \
+	"Up: ~u~ \
+	~n~Down: ~d~ ~n~Left: ~<~ ~n~Right ~>~ \
+	~n~ Press ~k~~PED_JUMPING~", \
+	2000, 5); 
+    return 1;
+}
+        </pre>
+        </div>
+    </td>
+    <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/mgt.jpg"></td>
+    </tr>
+</table>
+
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <br />
+    <h2>Gametext ID</h2>
+    <tr>
+        <th> <b>ID</b> </th>
+        <th> <b>View</b></th>
+    </tr>
+
+    <tr>
+        <td>0</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/0.gif"></td>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/1.gif"></td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/2.gif"></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/3.gif"></td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/4.gif"></td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/5.gif"></td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td><img class="imggt" src="~/Content/Pages/IDs/Gametexts/images/6.gif"></td>
+    </tr>
+
+</table>

@@ -1,0 +1,40 @@
+﻿a:hover{
+color: black;
+}
+
+#hrefRemoval a{
+color:black;
+}
+
+table.wikitable{
+    margin: 1em 1em 1em 0px;
+    background: none repeat scroll 0% 0% #F9F9F9;
+    border: 1px solid #AAA;
+
+    border-collapse: collapse;
+    
+}
+th{
+    background-color: gray;
+}
+p {
+    margin: 0.4em 0px 0.5em;
+    line-height: 1.5em; 
+    
+}
+
+table, th, td 
+{
+border-color:gray;
+border-style:solid;
+border-width:1px;
+padding: 2px;
+}
+
+#AfterTable{
+background-color: red;
+}
+
+ul li{
+    list-style: none;
+}

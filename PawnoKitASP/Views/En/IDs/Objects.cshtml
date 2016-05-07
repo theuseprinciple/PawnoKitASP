@@ -1,7 +1,428 @@
 ﻿
 @{
-    ViewBag.Title = "Objects";
+    ViewBag.Title = "Объекты";
 }
 
-<h2>Objects</h2>
+
+<div id="obj-nav">
+    <ul>
+        <li><a class="external" href="#GTASA-Objects">GTA:SA Объекты</a></li>
+        <ul>
+            <li><a class="external" href="#BeachAndSea">Пляж и море</a></li></li>
+            <ul>
+                <li><a class="external" href="#BeachAndSea-General">Общее</a></li>
+                <li><a class="external" href="#BeachAndSea-SDaP">Корабли, Пристани и Доки</a></li>
+            </ul>
+
+            <li><a class="external" href="#Buildings">Здания</a></li></li>
+            <ul>
+                <li><a class="external" href="#Buildings-BCaC">Бары, Клубы и Казино</a></li>
+                <li><a class="external" href="#Buildings-FaW">Фабрики и Склады</a></li>
+                <li><a class="external" href="#Buildings-OaS">Офисы и Небоскребы</a></li>
+                <li><a class="external" href="#Buildings-OB">Другие здания</a></li>
+                <li><a class="external" href="#Buildings-RaH">Рестораны и Отели</a></li>
+                <li><a class="external" href="#Buildings-SaS">Спортивные объекты и стадионы</a></li>
+            </ul>
+
+            <li><a class="external" href="#Industrial">Индустриальное</a></li></li>
+            <ul>
+                <li><a class="external" href="#Industrial-Cranes">Краны</a></li>
+                <li><a class="external" href="#Industrial-CDaR">Ящики и стойки</a></li>
+                <li><a class="external" href="#Industrial-General">Общее</a></li>
+            </ul>
+
+            <li><a class="external" href="#Interior">Интерьер</a></li></li>
+            <ul>
+                <li><a class="external" href="#Interior-BI">Предметы для бара</a></li>
+                <li><a class="external" href="#Interior-CI">Предметы для казино</a></li>
+                <li><a class="external" href="#Interior-Clothes">Одежда</a></li>
+                <li><a class="external" href="#Interior-DaW">Двери и окна</a></li>
+                <li><a class="external" href="#Interior-Furniture">Мебель</a></li>
+                <li><a class="external" href="#Interior-HI">Предметы для дома</a></li>
+                <li><a class="external" href="#Interior-SI">Предметы для магазина</a></li>
+                <li><a class="external" href="#Interior-TaC">Столы и стулья</a></li>
+            </ul>
+
+            <li><a class="external" href="#Miscellaneous">Разное</a></li></li>
+            <ul>
+                <li><a class="external" href="#Miscellaneous-FaD">Еда и напитки</a></li>
+                <li><a class="external" href="#Miscellaneous-LSaS">Стойки, лестницы, строительные леса</a></li>
+                <li><a class="external" href="#Miscellaneous-Military">Военное</a></li>
+                <li><a class="external" href="#Miscellaneous-PaI">Пикапы и иконки</a></li>
+                <li><a class="external" href="#Miscellaneous-Special">Особое</a></li>
+                <li><a class="external" href="#Miscellaneous-SaRI">Убранство улиц и дорог</a></li>
+                <li><a class="external" href="#Miscellaneous-Trash">Мусор</a></li>
+            </ul>
+
+            <li><a class="external" href="#Nature">Природа</a></li></li>
+            <ul>
+                <li><a class="external" href="#Nature-Plants">Растения</a></li>
+                <li><a class="external" href="#Nature-Rocks">Камни</a></li>
+                <li><a class="external" href="#Nature-Trees">Деревья</a></li>
+            </ul>
+
+            <li><a class="external" href="#Structures">Сооружения</a></li></li>
+            <ul>
+                <li><a class="external" href="#Structures-AaA">Аэропорт и самолеты</a></li>
+                <li><a class="external" href="#Structures-Ramps">Трамплины</a></li>
+                <li><a class="external" href="#Structures-SBaS">Знаки, рекламные щиты и статуи</a></li>
+            </ul>
+
+            <li><a class="external" href="#Transportation">Дорожная система / Перевозки</a></li></li>
+            <ul>
+                <li><a class="external" href="#Transportation-Railroads">Железные дороги</a></li>
+                <li><a class="external" href="#Transportation-RBaT">Дороги, мосты, туннели</a></li>
+                <li><a class="external" href="#Transportation-Farms">Фермы</a></li>
+                <li><a class="external" href="#Transportation-CP">Парковки</a></li>
+                <li><a class="external" href="#Transportation-Housing">Жилье</a></li>
+            </ul>
+        </ul>
+        <li><a class="external" href="#SAMP-Objects">SAMP Объекты</a></li>
+        <ul>
+            <li><a class="external" href="#03c">0.3C Объекты</a></li></li>
+            <li><a class="external" href="#03d">0.3D Объекты</a></li></li>
+            <ul>
+                <li><a class="external" href="#03d-RC3-3">0.3D RC3-3 Объекты</a></li>
+                <li><a class="external" href="#03d-RC7">0.3D RC7 Объекты</a></li>
+                <li><a class="external" href="#03d">0.3D Объекты</a></li>
+            </ul>
+            <li><a class="external" href="#03e">0.3E Объекты</a></li></li>
+            <ul>
+                <li><a class="external" href="#03e-RC1">0.3E RC1 Объекты</a></li>
+                <li><a class="external" href="#03e-RC3">0.3E RC3 Объекты</a></li>
+                <li><a class="external" href="#03e-RC4">0.3E RC4 Объекты</a></li>
+                <li><a class="external" href="#03e-RC6">0.3E RC6 Объекты</a></li>
+                <li><a class="external" href="#03e-RC7">0.3E RC7 Объекты</a></li>
+            </ul>
+
+            <li><a class="external" href="#037-RC1">0.3.7 Объекты</a></li></li>
+            <ul>
+                <li><a class="external" href="#037-RC1">0.3.7 RC1 Объекты</a></li>
+                <li><a class="external" href="#037-RC2a3">0.3.7 RC2 and RC3 Объекты</a></li>
+                <li><a class="external" href="#037-RC3skins">0.3.7 RC3 Скины</a></li>
+                <li><a class="external" href="#037-RC4">0.3.7 RC4 Объекты</a></li>
+                <li><a class="external" href="#037-Extra">0.3.7 Дополнительные объекты (Заменяют старые неиспользуемые IDs)</a></li>
+            </ul>
+        </ul>
+        <li><a class="external" href="#Credits">Авторы</a></li>
+    </ul>
+</div>
+
+<div id="returnUpButton">
+    <input type="button" value="В начало" name="goUp" onclick="scrolltop()" />
+</div>
+
+<div id="obj-zone">
+
+
+    <b><font size="7" id="GTASA-Objects">GTASA Objects</font></b><br />
+    <br />
+    <font size="7" id="BeachAndSea">Beach and Sea</font><br />
+    <br />
+    <font size="6" id="BeachAndSea-General">General</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6218/6378202101_85e109de75_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6215/6378172201_4f1d6acd11_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="BeachAndSea-SDaP"> Ships, Docks and Piers</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6092/6378192767_95aa849821_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6101/6378169547_c9006196b9_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6236/6378199279_d9c215f397_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6038/6378162857_b587bfee06_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6042/6378188551_65a3f09411_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Buildings">Buildings</font><br />
+    <br />
+    <font size="6" id="Buildings-BCaC">Bars, Clubs and Casinos</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6056/6378196427_27727f57fd_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6031/6378176939_7fdb1be0a4_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6238/6378186959_21b2844796_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Buildings-FaW">Factories and Warehouses</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6097/6378222719_e6d07dfd47_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6035/6378198541_4d9b8f825d_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6218/6378163747_e8e2b1b560_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6099/6378200645_acf0bd8c19_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6220/6378170581_0860570e4c_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6031/6378199665_0b120ce539_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Buildings-OaS">Offices and Skyscrapers</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6058/6378188081_26aac1c8b7_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6099/6378167749_91e22651ce_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6098/6378204361_8cde2c4675_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Buildings-OB">Other Buildings</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6033/6378182743_2c7cb094c4_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6240/6378210493_169129ae32_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6222/6378175401_6d576ddbb8_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6237/6378214871_22eb30cc6c_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Buildings-RaH">Restaurants and Hotels</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6118/6378209341_a2af3174db_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6234/6378174301_2a1447c52d_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Buildings-SaS"> Sports and Stadiums</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6212/6378208221_8407af566d_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6058/6378164919_c458538051_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Industrial">Industrial</font><br />
+    <br />
+    <font size="6" id="Industrial-Cranes">Cranes</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6106/6378161861_27bb3d0f50_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Industrial-CDaR">Crates, Drums and Racks</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6097/6378216237_e146f95813_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6119/6378172695_d1949b5663_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Industrial-General">General</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6113/6378168895_49a43b2ee5_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6118/6378176203_7d37d7d3fa_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Interior">Interior</font><br />
+    <br />
+    <font size="6" id="Interior-BA">Bar Items</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6108/6378164291_efa0c8a96c_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-CI">Casino Items</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6057/6378194125_535f155230_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6115/6378195581_a9e82e0bfb_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-Clothes"> Clothes</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6232/6378189767_1a9d5b040a_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-DaW">Doors and Windows</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6047/6378186309_d4aa728cd0_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6117/6378171235_1278e29f7c_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-Furniture">Furniture</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6220/6378178073_d365005e73_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6212/6378218801_b69a0d61bb_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6103/6378173225_6634cdd272_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-HI">Household Items</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6118/6378197597_364c23321f_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-SI">Shop Items</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6215/6378217313_c28b7b73a3_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Interior-TaC">Tables and Chairs</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6037/6378192063_471b7085e8_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6109/6378184077_c2c1e03b94_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Miscellaneous">Miscellaneous</font><br />
+    <br />
+    <font size="6" id="Miscellaneous-FaD">Food and Drinks</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6054/6378189169_398a589f16_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Miscellaneous-LSaS">Ladders, Stairs and Scaffolding</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6240/6378185095_a29b3a8faf_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6100/6378166761_5171328a64_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6040/6378202787_d7a7418523_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Miscellaneous-Military">Military</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6037/6378224701_1418934e60_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Miscellaneous-PaI">Pickups and Icons</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6091/6378161479_af343d38d3_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Miscellaneous-Special">Special</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6094/6378213027_8c94b96c78_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Miscellaneous-SaRI">Street and Road Items</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6106/6378223413_2d652f6dd5_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Miscellaneous-Trash">Trash</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6117/6378221757_a1a6e74212_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6091/6378195289_587039d36e_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Nature">Nature</font><br />
+    <br />
+    <font size="6" id="Nature-Plants">Plants</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6225/6378207153_25862b032d_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6234/6378219581_c234154b93_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6104/6378165847_f7958b472d_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6042/6378212315_aa7c3e9ef3_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6211/6378180613_60f8c17d8a_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Nature-Rocks">Rocks</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6108/6378161013_0c6bcd3478_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6045/6378194979_96fc6c1ce9_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6101/6378162049_f1ee20f434_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Nature-Trees">Trees</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6096/6378190855_1a1b56a53e_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6059/6378211621_efc076932d_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6108/6378205875_2786e26dbb_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Structures">Structures</font><br />
+    <br />
+    <font size="6" id="Structures-AaA">Airport and Aircraft</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6049/6378181847_1173a23065_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6039/6378171939_1de2ff2b87_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Structures-Ramps">Ramps</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6229/6378203907_41b6aaca39_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Structures-SBaS">Signs, Billboards and Statues</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6110/6378179771_3d6b70f309_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="Transportation">Transportation</font><br />
+    <br />
+    <font size="6" id="Transportation-Railroads">Railroads</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6212/6378220623_d2b55b956c_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6050/6378183533_83fdd3d606_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Transportation-RBaT">Roads, Bridges and Tunnels</font><br />
+    <br />
+    <img src="http://farm7.staticflickr.com/6038/6378214197_c7848a313b_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6032/6378181339_b556f22a56_b.jpg" border="0" alt="" /><br />
+    <img src="http://farm7.staticflickr.com/6222/6378201537_c49495f649_b.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Transportation-Farms">Farms</font><br />
+    <br />
+    <img src="http://gamerxserver.com/objects/Farms/GTASA-Farms1.png" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Transportation-CP">Car Parks</font><br />
+    <br />
+    <img src="http://gamerxserver.com/objects/Carparks/GTASA-Carparks1.png" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="Transportation-Housing">Housing</font><br />
+    <br />
+    <img src="http://gamerxserver.com/objects/Housing/GTASA-Housing1.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/objects/Housing/GTASA-Housing2.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/objects/Housing/GTASA-Housing3.png" border="0" alt="" /><br />
+    <br />
+    -----------------------------------------------------------------------------------------<br />
+    <b><font size="7" id="SAMP-Objects">SA:MP Objects</font></b><br />
+    <br />
+    <font size="6" id="03c">0.3c Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Arrows.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Bandanas.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Berets.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Caps.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-CapsAndTools.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-GlassesAndElevator.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-HatsAndCages.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-HatsAndCaps.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-HatsAndHelmets.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-LandMassesAndPlatforms.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-LightsAndNeonTubes.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-MapPictures.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-MasksBandanasAndMobiles.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Misc1.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Misc2.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Misc3.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Misc4.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-ModularRoadSections1.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-ModularRoadSections2.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-ModularTunnel.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-PomPoms.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Ramps.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Tubes1.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Tubes2.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Tubes3.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Tubes4.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Tubes5.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Tubes6.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Watches.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/images/Objects/0.3c/0.3c-Xmas.png" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="03d">0.3d Objects</font><br />
+    <br />
+    <font size="6" id="03d-RC3-3">0.3d RC3-3 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3d/0.3d-Objects-1.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="03d-RC7">0.3d RC7 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3d/0.3d-Objects-2.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="03d">0.3d Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3d/0.3d-Objects-3.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="7" id="03e">0.3e Objects</font><br />
+    <br />
+    <font size="6" id="03e-RC1">0.3e RC1 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3e/0.3e-Objects-1.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="03e-RC3">0.3e RC3 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3e/0.3e-Objects-2.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="03e-RC4">0.3e RC4 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3e/0.3e-Objects-3.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="03e-RC6">0.3e RC6 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3e/0.3e-Objects-4.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="03e-RC7">0.3e RC7 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/images/Objects/0.3e/0.3e-Objects-5.jpg" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="037-RC1">0.3.7 RC1 Objects</font><br />
+    <br />
+    <img src="http://gamerxserver.com/objects/037/0.3.7-Stuff-1.png" border="0" alt="" /><br />
+    <img src="http://gamerxserver.com/objects/037/0.3.7-Tubes-1.png" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="037-RC2a3">0.3.7 RC2 and RC3 Objects</font><br />
+    <img src="http://gamerxserver.com/objects/037/0.3.7-RC2-and-RC3.png" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="037-RC3skins">0.3.7 RC3 Skins</font><br />
+    <img src="http://gamerxserver.com/objects/037/0.3.7-RC3-Skins.png" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="037-RC4">0.3.7 RC4 Objects</font><br />
+    <img src="http://gamerxserver.com/objects/037/0.3.7-RC4.png" border="0" alt="" /><br />
+    <br />
+    <font size="6" id="037-Extra">0.3.7 Extra Objects (replacing old unused object IDs)</font><br />
+    <img src="http://gamerxserver.com/objects/037/0.3.7-Extras.png" border="0" alt="" /><br />
+    <br />
+    <br />
+    (Еще 0.3.7 объекты будут пополняться. За изображения спасибо Lilou)<br />
+    <br />
+    ------------------------------------------------------------<br />
+    <font size="7" id="Credits">Авторы</font><br />
+    <p>Изображения созданы: <b>Lilou/Millie</b></p>
+    <p>Сборка с сайта: <a href="http://gamerxserver.com/forum/showthread.php?21-Objects-by-Category" target="external" class="external">http://gamerxserver.com/forum/showthread.php?21-Objects-by-Category</a></p>
+    <br />
+    <br />
+
+</div>
+<!-- С Днем космонавтики, космонавтики-->
 

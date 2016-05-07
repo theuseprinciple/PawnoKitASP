@@ -1,0 +1,39 @@
+﻿ #obj-zone img{
+        max-width: 578px;
+    }
+    
+    
+    
+    #obj-zone{
+        padding: 0;
+        margin: 0;
+    }
+    
+    #container{ /*Replacing!*/
+        position:relative;
+    }
+    
+    #returnUpButton{ 
+        padding: 2px; 
+        background-color: white; 
+        position:absolute; /* добавили */
+	    bottom:0; /* добавили */
+	    right: 15px; 
+    }
+    #obj-nav{
+        background-color: white;
+        padding: 5px;
+        width: 98%; 
+        margin-top: 10px;
+        border: 1px solid black;
+    }
+    #obj-nav a{
+        color: #658ab0;
+    }
+    #obj-nav ul ul{
+        margin-left: 20px;
+    }
+    
+    li{
+    list-style: none;
+}
