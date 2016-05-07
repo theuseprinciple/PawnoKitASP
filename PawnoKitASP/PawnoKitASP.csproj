@@ -318,6 +318,16 @@
     <Content Include="Content\Pages\MainInfo\style.css" />
     <Content Include="Content\Pages\Tools\ColorCreator\script.js" />
     <Content Include="Content\Pages\Tools\ColorCreator\style.css" />
+    <Content Include="Content\Pages\Tools\CommandCreator\script.js" />
+    <Content Include="Content\Pages\Tools\CommandCreator\style.css" />
+    <Content Include="Content\Pages\Tools\DialogCreator\images\DIALOG_STYLE_INPUT.png" />
+    <Content Include="Content\Pages\Tools\DialogCreator\images\DIALOG_STYLE_LIST.png" />
+    <Content Include="Content\Pages\Tools\DialogCreator\images\DIALOG_STYLE_MSGBOX.png" />
+    <Content Include="Content\Pages\Tools\DialogCreator\images\DIALOG_STYLE_PASSWORD.png" />
+    <Content Include="Content\Pages\Tools\DialogCreator\images\DIALOG_STYLE_TABLIST.png" />
+    <Content Include="Content\Pages\Tools\DialogCreator\images\DIALOG_STYLE_TABLIST_HEADERS.png" />
+    <Content Include="Content\Pages\Tools\DialogCreator\script.js" />
+    <Content Include="Content\Pages\Tools\DialogCreator\style.css" />
     <Content Include="Content\Pages\Tools\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -403,6 +413,9 @@
     <Content Include="Views\En\MainInfo.cshtml" />
     <Content Include="Views\En\MainInfo\Limits.cshtml" />
     <Content Include="Views\En\Tools\GametextConverter.cshtml" />
+    <Content Include="Views\En\Tools\CommandCreator\_DCMD.cshtml" />
+    <Content Include="Views\En\Tools\CommandCreator\_ZCMD.cshtml" />
+    <Content Include="Views\En\Tools\CommandCreator\_STD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -411,8 +424,6 @@
     <Folder Include="Content\Pages\IDs\Skins\Images\" />
     <Folder Include="Content\Pages\IDs\Vehicles\Images\" />
     <Folder Include="Content\Pages\IDs\Weathers\Images\" />
-    <Folder Include="Content\Pages\Tools\CommandCreator\" />
-    <Folder Include="Content\Pages\Tools\DialogCreator\" />
     <Folder Include="Content\Pages\Tools\KeyFinder\" />
     <Folder Include="Content\Pages\Tools\SoundManager\" />
     <Folder Include="Content\Pages\Tools\StringSizeCounter\" />

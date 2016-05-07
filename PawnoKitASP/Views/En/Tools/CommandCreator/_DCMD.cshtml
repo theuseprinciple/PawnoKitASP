@@ -1,0 +1,19 @@
+﻿В начало мода
+<div class="code">
+    #define dcmd(%1,%2,%3) if (!strcmp((%3)[1], #%1, true, (%2)) && ((((%3)[(%2) + 1] == '\0') && (dcmd_%1(playerid, ""))) || (((%3)[(%2) + 1] == ' ') && (dcmd_%1(playerid, (%3)[(%2) + 2]))))) return 1
+
+</div>
+В OnPlayerCommandText:
+<div class="code">
+    dcmd(<span class="DatCmd">aduty</span>, <span class="LengthZone">0</span>, cmdtext);
+</div>
+В конец мода
+<div class="code">
+    <pre>
+dcmd_<span class="DatCmd">aduty</span>(playerid, params[]) 
+{
+    // Тело команды
+    return 1;
+}
+</pre>
+</div>

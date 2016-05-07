@@ -1,7 +1,110 @@
 ﻿
 @{
-    ViewBag.Title = "DialogCreator";
+    ViewBag.Title = "Создатель диалогов";
 }
 
-<h2>DialogCreator</h2>
+<span id="m_lineNumber" data-pkmessage="Строка" />
+<span id="m_columnNumber" data-pkmessage="Колонка" />
+<span id="m_clearName" data-pkmessage="Очистить" />
+
+<table width="500" border="1" style="margin-top: 5px;">
+    <tbody>
+        <tr>
+            <td>Тип диалога:</td>
+            <td>
+                <select id="GetDialogType" name="DialogType" onchange="UpdateDialogType(this.value)">
+                    <option value="DIALOG_STYLE_INPUT">Ввод текста</option>
+                    <option value="DIALOG_STYLE_MSGBOX">Информационное окно</option>
+                    <option value="DIALOG_STYLE_LIST">Выбор элементов из списка</option>
+                    <option value="DIALOG_STYLE_PASSWORD">Ввод пароля</option>
+                    <option value="DIALOG_STYLE_TABLIST">Простая таблица</option>
+                    <option value="DIALOG_STYLE_TABLIST_HEADERS">Таблица с именами колонок</option>
+                </select>
+                <br />
+            </td>
+        </tr>
+
+        <tr>
+            <td style="vertical-align: top;">Пример:</td>
+            <td><img id="DatIMG" alt="" src="/Content/Pages/Tools/DialogCreator/images/DIALOG_STYLE_INPUT.png"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ID диалога*:</td>
+            <td><input type="text" id="GetDialogID" size="20" placeholder="Уникальный ID" maxlength="11"></td>
+        </tr>
+        <tr>
+            <td>Заголовок:</td>
+            <td><input type="text" id="GetTitle" size="40"></td>
+        </tr>
+
+        <tr id="colsnumber" style="display:none">
+            <td>&nbsp;</td>
+            <td>
+                Количество колонок:
+                <!-- ------------------------------------- -->
+                <select id="colsnumber-selecting" name="colsnumber-selecting" onchange="TablistUpdateColsVisibility(this.value)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                </select>
+                <!-- ------------------------------------- -->
+            </td>
+        </tr>
+
+        <tr>
+            <td style="vertical-align: top;">
+                Основной текст
+            </td>
+            <td>
+
+                <div class="StandartMainTextZone">
+                    <textarea id="GetGT" cols="45" rows="10"></textarea>
+                </div>
+
+                <div class="StandartDialogListZone" style="display:none;">
+                    <input type="text" id="list-line-0" class="l-l-s" size="40" placeholder="Строка №0">
+                    <input type="button" id="AddLineButton" value="Добавить" onclick="DialogListAddRow()">
+                    <input type="button" id="RemoveLineButton" value="Удалить" onclick="DialogListRemoveRow()">
+                </div>
+
+                <div class="DialogTablistZone" style="display:none;">
+
+                    <div class="tablist-headers" style="display:none;">
+                        <input type="text" class="tablist-col-header-0 tablist-col-0" size="10" placeholder="Заголовок №0">
+                        <input type="text" class="tablist-col-header-1 tablist-col-1" size="10" placeholder="Заголовок №1">
+                        <input type="text" class="tablist-col-header-2 tablist-col-2" size="10" placeholder="Заголовок №2">
+                        <input type="text" class="tablist-col-header-3 tablist-col-3" size="10" placeholder="Заголовок №3">
+                    </div>
+
+                    <div id="tablist-row--1" class="tablist-row"></div> <!-- Костыль -->
+
+                    <input type="button" id="AddTablistRowButton" value="Добавить" onclick="DialogTablistAddRow()">
+                    <input type="button" id="RemoveTablistRowButton" value="Удалить" onclick="DialogTablistRemoveRow()">
+                </div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>Кнопка 1:</td>
+            <td><input type="text" id="GetButton1" size="16"></td>
+        </tr>
+
+        <tr>
+            <td>Кнопка 2:</td>
+            <td><input type="text" id="GetButton2" size="16"></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<input type="button" id="PressButtonOnDialogCreate" value="Создать диалог">
+<div id="ErrorZone" style="color: darkred; display:none;">Введите целое число в ID Диалога!</div>
+<div id="OutZone"></div>
+
 

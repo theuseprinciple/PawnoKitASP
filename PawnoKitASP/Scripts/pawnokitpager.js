@@ -12,8 +12,6 @@
 
             .click(function () {
                 // Вы перешли по ссылке
-
-                // Start loading JSON Page info
                 history.pushState(state, state.title, state.url);
                 PawnoKitPager.unloadCurrentPage();
                 PawnoKitPager.loadPage(state.url);
@@ -58,8 +56,7 @@ var PawnoKitPager = {
     getStyleUrl: function () { return this._loadedStyleUrl; },
 
     installPageScript: function (pageScript) {
-        if (!this.isScriptLoaded())
-        {
+        if (!this.isScriptLoaded()){
             this._loadedScript = pageScript;
             this._loadedScript.Install();
             this._markScriptAsLoaded();
@@ -70,8 +67,7 @@ var PawnoKitPager = {
     },
 
     installPageStyle: function (styleUrl) {
-        if (!this.isStyleLoaded())
-        {
+        if (!this.isStyleLoaded()){
             $("<link/>", {
                 rel: "stylesheet",
                 type: "text/css",
@@ -86,27 +82,25 @@ var PawnoKitPager = {
     },
 
     _uninstallPageScript: function () {
-        if (this.isScriptLoaded())
-        {
+        if (this.isScriptLoaded()){
             this._loadedScript.Uninstall();
             this._loadedScript = {};
             this._markScriptAsUnloaded();
 
             console.log("Script's been unloaded");
         }
-        else console.log("Not any script installed to unload");
+        else console.log("Not any scripts installed to unload");
         
     },
     
     _uninstallPageStyle: function () {
-        if (this.isStyleLoaded())
-        {
+        if (this.isStyleLoaded()){
             $('link[href="' + this.getStyleUrl() + '"]').remove();
             this._markStyleAsUnloaded();
 
             console.log("Style's been unloaded");
         }
-        else console.log("Not any style installed to unload");
+        else console.log("Not any styles installed to unload");
     },
 
     loadPage: function (url) {
@@ -179,16 +173,13 @@ $(document).ready(function () {
     history.replaceState(st, st.title, st.url); 
     
     window.onpopstate = function (e) {
-        try
-        {
-            if (history.state.url != null)
-            {
+        try{
+            if (history.state.url != null){
                 PawnoKitPager.unloadCurrentPage();
                 PawnoKitPager.loadPage(history.state.url);
             }
         }
-        catch(e)
-        {
+        catch(e){
 
         }
     };

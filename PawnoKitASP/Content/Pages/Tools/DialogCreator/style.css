@@ -1,0 +1,22 @@
+﻿.tablist-row input {
+    display: inline-block;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.tablist-headers {
+    margin-bottom: 10px;
+}
+
+#AddLineButton, #RemoveLineButton{
+  display: inline;
+}
+ 
+
+#DatIMG{
+    max-width:280px;
+}
+
+.l-l-s{
+display: block;
+}

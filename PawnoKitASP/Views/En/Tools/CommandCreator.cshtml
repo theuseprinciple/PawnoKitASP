@@ -1,7 +1,48 @@
 ﻿
 @{
-    ViewBag.Title = "CommandCreator";
+    ViewBag.Title = "Создатель команд";
 }
 
-<h2>CommandCreator</h2>
+<div id="BeginZone">
+    <table width="100%" border="1">
+        <tr>
+            <td>
+                <select id="GetCmdProc" name="CmdProc" onchange="CmdGen.updatetype(this.value)">
+                    <option value="STD_CMD">OnPlayerCommandText</option>
+                    <option value="ZCMD_CMD">ZCMD</option>
+                    <option value="DCMD_CMD">DCMD</option>
+                    <!-- <option value="YCMD_CMD">YCMD</option> -->
+                </select>
+            </td>
+            <td>
+                <input type="text" id="GetCmd" size="30" placeholder="Введите команду без &quot;/&quot;" maxlength="128">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" id="ButtonCreateCmd" value="Создать команду"></td>
+            <td id="RegFlag" style="visibility: visible;">Не учитывать регистр<input type="checkbox" name="GetRegisterFlag" disabled="disabled" alt="Скоро..." value="WithoutRegister" checked></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="ButtonResetCmd" value="Очистить"></td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    <div id="ErrorHere">Введите команду!</div>
+    <div id="OutZone" style="visibility: hidden;">
+        <div id="STD_CMD">
+            @Html.Partial("~/Views/En/Tools/CommandCreator/_STD.cshtml")
+        </div>
+
+        <div id="ZCMD_CMD">
+            @Html.Partial("~/Views/En/Tools/CommandCreator/_ZCMD.cshtml")
+        </div>
+
+        <div id="DCMD_CMD">
+            @Html.Partial("~/Views/En/Tools/CommandCreator/_DCMD.cshtml")
+        </div>
+
+        <div id="YCMD_CMD">
+        </div>
+    </div>
+</div>
 
