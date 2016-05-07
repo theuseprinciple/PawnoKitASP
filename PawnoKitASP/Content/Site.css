@@ -107,7 +107,7 @@ button[type=button]:active {
 #content input[type='radio']:checked + label {
     background-position: 0 -18px;
 }
-/*
+
 label{  
     display:block;   
     padding-left: 30px;
@@ -128,7 +128,7 @@ label[for="allskins"]{
     color: #707281;
 }
 
-*/
+
 
 
 

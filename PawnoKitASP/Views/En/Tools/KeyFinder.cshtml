@@ -1,7 +1,31 @@
 ﻿
 @{
-    ViewBag.Title = "KeyFinder";
+    ViewBag.Title = "Менеджер клавиш";
 }
 
-<h2>KeyFinder</h2>
+<textarea id="kf_input" onkeydown="OnKeyDown(event.keyCode)" placeholder="Выдели это поле и нажми на клавишу" style="width: 575px; height: 30px;"></textarea>
+<br />
+<br />
+<form name="keymodeform" style="float: right;" onchange="OnKeyModeChange()">
+    <INPUT TYPE="radio" NAME="keymode" VALUE="keystd" checked><label for=""><p>Прыжок - Shift, ускорение - пробел</p></label>
+    <INPUT TYPE="radio" NAME="keymode" VALUE="keyme"><label for=""><p>Прыжок - пробел, ускорение - Shift</p></label>
+
+</form>
+<form>
+    <INPUT TYPE="radio" NAME="state" VALUE="OnFoot" checked><label for=""><p>Игрок на ходу</p></label>
+    <INPUT TYPE="radio" NAME="state" VALUE="InVehicle"><label for=""><p>Игрок в машине</p></label>
+</form>
+<br />
+<br />
+Вывод:
+<textarea id="kf_output" style="width: 575px; height: 200px;"></textarea>
+<input type="button" id="ButtonResetCmd" value="Очистить">
+
+<div class="notabene">
+    <p>* Работоспособность не гарантируется при уникальном управлении (искл: прыжок-ускорение)</p>
+    <p>* Комбинации клавиш в этом сервисе не поддерживаются</p>
+    <p>* Включите NumLock для полной работоспособности</p>
+    <p>* Дублирующиеся клавиши на клавиатуре могут не иметь равного значения в игре (пример: левый шифт и правый шифт, левый альт и правый, enter и num-enter)</p>
+</div>
+
 

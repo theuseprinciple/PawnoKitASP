@@ -1,7 +1,12 @@
 ﻿
 @{
-    ViewBag.Title = "StingSizeCounter";
+    ViewBag.Title = "Узнать длину строки";
 }
 
-<h2>StingSizeCounter</h2>
-
+<div class="zagolovok">Введите строку в поле ниже</div>
+<textarea id="stringarea"></textarea>
+<input name="stringareabutton" type="submit" value="Подсчитать">
+<p style="display: inline;"><input onchange="OnCheckBoxChanged()" type="checkbox" id="OnlineCheck" name="OnlineCheck" value="yes-online" checked> <label for="OnlineCheck">Считать Online</label></p>
+<div id="S-Arena-InfoZone">
+    Символов в строке: <div id="CounterLength">0</div>
+</div> 

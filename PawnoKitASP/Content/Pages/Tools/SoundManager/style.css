@@ -1,0 +1,9 @@
+﻿#preloaderMain{
+    display: block;
+    text-align: center; 
+    font-size: 14px; 
+    font-family: tahoma;
+}
+#secondMain{
+    display: none;
+} 

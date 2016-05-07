@@ -1,7 +1,31 @@
 ﻿
 @{
-    ViewBag.Title = "GametextConverter";
+    ViewBag.Title = "Gametext converter";
 }
 
-<h2>GametextConverter</h2>
+<table>
+    <tr>
+        <th>Текст на русском</th>
+        <th></th>
+        <th>Результат</th>
+    </tr>
+    <tr>
+        <td><textarea class="gt_textarea" id="gt_textarea_in"></textarea></td>
+        <td class="middle_gt_zone">Данный сервис предназначен для перевода русских GameText, TextDraw символов в поддерживаемый GTA-русификаторами формат.</td>
+        <td><textarea placeholder="Конвертер №1: С учетом регистра" class="gt_textarea" id="gt_textarea_out"></textarea></td>
+    </tr>
+    <tr>
+        <td><input name="stringareabutton_from" type="submit" value="Конвертировать" onclick="change(document.getElementById('gt_textarea_in').value)"></td>
+        <td></td>
+        <td><textarea placeholder="Конвертер №2: В псевдошрифт" id='tt2' class="gt_textarea"></textarea></td>          <!-- <input name="stringareabutton_to" type="submit" value="Конвертировать"> --></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><textarea placeholder="Конвертер №3: Без учета регистра" id='tt3' class="gt_textarea"></textarea></td>
+    </tr>
+</table>
 
+<p>Пример использования:</p>
+<div class="code">GameTextForPlayer(playerid, "љOЂPO ЊO„A‡OBAЏ’", 5000, 1);</div>
+<p class="notabene">* Символы "ц", "ф" переводятся в верхний регистр, за неимением кодов в большинстве русификаторов</p>

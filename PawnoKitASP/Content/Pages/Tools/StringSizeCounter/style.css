@@ -1,0 +1,15 @@
+﻿textarea {
+    width: 98%; /* Ширина поля в процентах */
+    height: 50px; /* Высота поля в пикселах */
+    resize: none; /* Запрещаем изменять размер */
+   } 
+   #CounterLength{
+     padding: 5px;
+     background-color: white;
+     display: inline;
+     margin-left: 2px;
+   }
+   #S-Arena-InfoZone{
+     float: right;
+     margin-top: 3px;
+   }

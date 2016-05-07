@@ -1,0 +1,37 @@
+﻿ #content{
+        font-size: 12px;
+        font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    }
+    table{
+        width: 100%;
+    }
+    
+    table td{  
+        padding: 2px;
+        text-align: center;
+    }
+    table td:last-child{  
+        border-right: none;
+    }
+    table th{
+        text-align: center;
+        font-size: 11px; background-color: #DEE5EB; font-weight: bold; color: #45688E; padding: 6px 8px;
+    }
+
+    .gt_textarea
+    {
+        width: 96%;
+        height: 100px;
+        resize: none; /* Запрещаем изменять размер */
+    }
+    .middle_gt_zone{
+        text-align: left;
+        width: 160px; 
+        padding: 10px;
+    }
+     
+    
+    .notabene{
+        font-size:11px;
+        color: gray;
+    }
