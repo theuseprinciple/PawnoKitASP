@@ -1,4 +1,34 @@
-﻿#content input[type=submit],
+﻿#Cat-Chose-Zone{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px dotted black;
+}
+.Cat-Chose-Zone-Pod-Marker{
+	padding-left: 10px;
+}
+
+.Image-Output-Zone{
+	margin-top: 10px;
+	display: block;
+	margin-bottom: 10px;
+}
+.Image-Output-Zone b{
+	font-weight: bold;
+}
+.Image-Outputed{
+	float: left;
+	/*width: 74px;*/
+	border-right: 2px solid black;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.Info-Outputed{
+	float: left;
+	padding-left: 10px;
+}
+/*#content input[type=submit],
 input[type=button],
 button[type=submit],
 button[type=button] {
@@ -74,4 +104,4 @@ label[for="allskins"]{
     font-size: 14pt;
     font-weight: bold;
     color: #707281;
-}
+}*/
