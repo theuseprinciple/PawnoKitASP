@@ -207,7 +207,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\v2_logo_washed.gif" />
+    <Content Include="Content\Pages\DownloadSAMP\script.js" />
     <Content Include="Content\Pages\DownloadSAMP\style.css" />
+    <Content Include="Content\Pages\IDs\ClientCommands\script.js" />
+    <Content Include="Content\Pages\IDs\ClientCommands\style.css" />
+    <Content Include="Content\Pages\IDs\Explosions\script.js" />
     <Content Include="Content\Pages\IDs\Explosions\style.css" />
     <Content Include="Content\Pages\IDs\Gametexts\images\0.gif" />
     <Content Include="Content\Pages\IDs\Gametexts\images\1.gif" />
@@ -218,6 +222,7 @@
     <Content Include="Content\Pages\IDs\Gametexts\images\6.gif" />
     <Content Include="Content\Pages\IDs\Gametexts\images\cgt.jpg" />
     <Content Include="Content\Pages\IDs\Gametexts\images\mgt.jpg" />
+    <Content Include="Content\Pages\IDs\Gametexts\script.js" />
     <Content Include="Content\Pages\IDs\Gametexts\style.css" />
     <Content Include="Content\Pages\IDs\Guns\images\Weapon-0.gif" />
     <Content Include="Content\Pages\IDs\Guns\images\Weapon-1.gif" />
@@ -271,14 +276,23 @@
     <Content Include="Content\Pages\IDs\Guns\images\Weapon-7.gif" />
     <Content Include="Content\Pages\IDs\Guns\images\Weapon-8.gif" />
     <Content Include="Content\Pages\IDs\Guns\images\Weapon-9.gif" />
+    <Content Include="Content\Pages\IDs\Guns\script.js" />
     <Content Include="Content\Pages\IDs\Guns\style.css" />
+    <Content Include="Content\Pages\IDs\Interiors\script.js" />
     <Content Include="Content\Pages\IDs\Interiors\style.css" />
+    <Content Include="Content\Pages\IDs\Mapicons\script.js" />
     <Content Include="Content\Pages\IDs\Mapicons\style.css" />
     <Content Include="Content\Pages\IDs\Objects\script.js" />
     <Content Include="Content\Pages\IDs\Objects\style.css" />
+    <Content Include="Content\Pages\IDs\Paintjobs\script.js" />
     <Content Include="Content\Pages\IDs\Paintjobs\style.css" />
+    <Content Include="Content\Pages\IDs\Pickups\script.js" />
     <Content Include="Content\Pages\IDs\Pickups\style.css" />
+    <Content Include="Content\Pages\IDs\Racecheckpoints\script.js" />
     <Content Include="Content\Pages\IDs\Racecheckpoints\style.css" />
+    <Content Include="Content\Pages\IDs\RconCommands\script.js" />
+    <Content Include="Content\Pages\IDs\RconCommands\style.css" />
+    <Content Include="Content\Pages\IDs\script.js" />
     <Content Include="Content\Pages\IDs\style.css" />
     <Content Include="Content\Pages\IDs\Vehcolors\images\Carcolours_All_500.gif" />
     <Content Include="Content\Pages\IDs\Vehcolors\images\Ext_vcolours_2013_01.gif" />
@@ -297,7 +311,9 @@
     <Content Include="Content\Pages\IDs\Vehcolors\images\Ext_vcolours_2013_14.gif" />
     <Content Include="Content\Pages\IDs\Vehcolors\images\Ext_vcolours_2013_15.gif" />
     <Content Include="Content\Pages\IDs\Vehcolors\images\Ext_vcolours_2013_16.gif" />
+    <Content Include="Content\Pages\IDs\Vehcolors\script.js" />
     <Content Include="Content\Pages\IDs\Vehcolors\style.css" />
+    <Content Include="Content\Pages\IDs\Weathers\script.js" />
     <Content Include="Content\Pages\IDs\Weathers\style.css" />
     <Content Include="Content\Pages\Index\images\Russia.png" />
     <Content Include="Content\Pages\Index\style.css" />
@@ -308,9 +324,11 @@
     <Content Include="Content\Pages\IDs\Vehicles\style.css" />
     <Content Include="Content\Pages\Index\images\United-Kingdom.png" />
     <Content Include="Content\Pages\Index\images\vkview.png" />
+    <Content Include="Content\Pages\Library\script.js" />
     <Content Include="Content\Pages\Library\style.css" />
     <Content Include="Content\Pages\MainInfo\Limits\script.js" />
     <Content Include="Content\Pages\MainInfo\Limits\style.css" />
+    <Content Include="Content\Pages\MainInfo\script.js" />
     <Content Include="Content\Pages\MainInfo\style.css" />
     <Content Include="Content\Pages\Tools\ColorCreator\script.js" />
     <Content Include="Content\Pages\Tools\ColorCreator\style.css" />
@@ -328,6 +346,7 @@
     <Content Include="Content\Pages\Tools\GametextConverter\style.css" />
     <Content Include="Content\Pages\Tools\KeyFinder\script.js" />
     <Content Include="Content\Pages\Tools\KeyFinder\style.css" />
+    <Content Include="Content\Pages\Tools\script.js" />
     <Content Include="Content\Pages\Tools\SoundManager\images\711.GIF" />
     <Content Include="Content\Pages\Tools\SoundManager\S-Sounds_version_1.0.swf" />
     <Content Include="Content\Pages\Tools\SoundManager\script.js" />
@@ -1138,8 +1157,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Pages\IDs\ClientCommands\" />
-    <Folder Include="Content\Pages\IDs\RconCommands\" />
     <Folder Include="Content\Pages\IDs\Skins\Images\" />
     <Folder Include="Content\Pages\IDs\Vehicles\Images\" />
     <Folder Include="Content\Pages\IDs\Weathers\Images\" />
