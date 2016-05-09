@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
@@ -66,3 +66,4 @@ namespace PawnoKitASP
         }
     }
 }
+*/
