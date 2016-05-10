@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PawnoKitASP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,7 @@ namespace PawnoKitASP.Controllers
         // ужас, но на первое время сойдет
         // GET: En
         public ActionResult Index(string hash) {
-            if(hash != null)
+            if (hash != null)
             {
                 try
                 {
