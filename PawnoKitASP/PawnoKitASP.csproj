@@ -150,7 +150,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RuController.cs" />
@@ -1029,8 +1028,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="Scripts\inboxed\bootstrap.js" />
-    <Content Include="Scripts\inboxed\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1044,9 +1041,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\inboxed\modernizr-2.6.2.js" />
-    <Content Include="Scripts\inboxed\respond.js" />
-    <Content Include="Scripts\inboxed\respond.min.js" />
     <Content Include="Scripts\pawnokitpager.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Scripts\pawnokit.js" />

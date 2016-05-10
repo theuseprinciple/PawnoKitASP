@@ -13,7 +13,14 @@
     <link type="text/css" rel="stylesheet" href="@Styles.Url("~/Content/css")">
     <script src="@Scripts.Url("~/Scripts/jquery-1.10.2.min.js")"></script>
 
-    <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+    @*<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>*@
+    <script src="//vk.com/js/api/openapi.js"></script>
+
+    <script>
+        VK.init({
+            apiId: 4145494 // id созданного вами приложения вконтакте 
+        });
+    </script>
 
     <script src="@Scripts.Url("~/Scripts/pawnokit.js")"></script>
 
@@ -22,8 +29,13 @@
         <script src="@Scripts.Url("~/Scripts/history.js")"></script>
         <script src="@Scripts.Url("~/Scripts/pawnokitpager.js")"></script>
     }
+    else
+    {
+        <script>
+            VK.callMethod("setLocation", window.location.pathname.slice(1));
+        </script>
+    }
 
-    
     @if (ViewBag.StyleUrl != null)
     {
         <link href="@ViewBag.StyleUrl" rel="stylesheet" type="text/css" />

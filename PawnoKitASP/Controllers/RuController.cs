@@ -12,7 +12,24 @@ namespace PawnoKitASP.Controllers
 
         // ужас, но на первое время сойдет
         // GET: En
-        public ActionResult Index() { ViewBag.LibsPath = "/"; return View(); }
+        public ActionResult Index(string hash) {
+            if(hash != null)
+            {
+                try
+                {
+                    string[] controllerAndAction = hash.Split(new char[] { '/' });
+                    return RedirectToActionPermanent(controllerAndAction[1], controllerAndAction[0]);
+                }
+                catch
+                {
+
+                }
+                
+                
+            }
+
+            ViewBag.LibsPath = "/"; return View();
+        }
 
         public ActionResult IDs() { ViewBag.LibsPath = "/"; return View(); }
         public ActionResult Vehicles() { ViewBag.LibsPath = "/IDs/"; return View(String.Format("{0}{1}{2}.cshtml", pathHeader, ViewBag.LibsPath, RouteData.GetRequiredString("action"))); }
