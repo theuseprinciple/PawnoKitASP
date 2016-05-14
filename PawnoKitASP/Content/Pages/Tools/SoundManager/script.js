@@ -1,8 +1,9 @@
 ﻿var counter;
 var counterNumber = 3;
+var timeout;
 function letItCount() {
     counter.innerHTML = counterNumber;
-    setTimeout(CounterBell, 1000);
+    timeout = setTimeout(CounterBell, 1000);
 }
 function CounterBell() {
     counterNumber--;
@@ -20,12 +21,12 @@ function run() {
 }
 
 Page = {
-
     Install: function () {
         counter = document.getElementById("preloaderCounter");
         letItCount();
     },
     Uninstall: function () {
+        clearTimeout(timeout);
         run = null;
         CounterBell = null;
         letItCount = null;

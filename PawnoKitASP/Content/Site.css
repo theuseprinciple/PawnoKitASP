@@ -129,7 +129,9 @@ label[for="allskins"]{
 }
 
 
-
+li {
+    list-style: none;
+}
 
 
 

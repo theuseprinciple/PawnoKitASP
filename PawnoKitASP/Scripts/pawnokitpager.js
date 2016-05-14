@@ -112,11 +112,13 @@ var PawnoKitPager = {
             }
 
             // set title
-            document.title = $("#attrs #pageTitle").data("pkinfo"); //eject title
+            var attrsElement = $("#pageAttrs");
+
+            document.title = attrsElement.data("pktitle"); //eject title
  
             // install style
             try {
-                var styleUrl = $("#attrs #pageStyleUrl").data("pkinfo");
+                var styleUrl = attrsElement.data("pkstyle");
                 self.installPageStyle(
                     styleUrl
                 );
@@ -125,7 +127,7 @@ var PawnoKitPager = {
 
             // install script
             try{
-                var scriptUrl = $("#attrs #pageScriptUrl").data("pkinfo");
+                var scriptUrl = attrsElement.data("pkscript");
                 $.getScript(
                     scriptUrl
                 )
