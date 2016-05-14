@@ -1,4 +1,32 @@
-﻿Page = {
+﻿function saveSelected(e_savebutton) {
+
+    var el = e_savebutton.parentNode;
+
+    var s_id = el.getElementsByClassName('id')[0].innerHTML;
+    var s_model = el.getElementsByClassName('model')[0].innerHTML;
+    var s_SNT = el.getElementsByClassName('SNT')[0].innerHTML;
+    var s_SPL = el.getElementsByClassName('SPL')[0].innerHTML;
+    var s_gender = el.getElementsByClassName('gender')[0].innerHTML;
+
+    var superiorEl = el.parentNode;
+    var imgOut = superiorEl.getElementsByClassName('Image-Outputed')[0];
+    var imgSrc = imgOut.getElementsByTagName('img')[0].src;
+    //alert(imgSrc);
+
+    var myMessage = "Skin ID: {0}\n\
+            Skin Model Name: {1}\n\
+            Skin Name/Type: {2}\n\
+            Singleplayer Location: {3}\n\
+            Gender: {4}".format(s_id, s_model, s_SNT, s_SPL, s_gender);
+
+    VK.api("wall.post", {
+        attachments: imgSrc,
+        message: myMessage
+    }, function (data) { });
+
+}
+
+Page = {
     Install: function () {
         var url = 'http://app.pawnokit.ru.swtest.ru/masters/skins.html';
         var param = 'skinchose';
@@ -45,36 +73,10 @@
             });
         });
 
-        function saveSelected(e_savebutton) {
-
-            var el = e_savebutton.parentNode;
-
-            var s_id = el.getElementsByClassName('id')[0].innerHTML;
-            var s_model = el.getElementsByClassName('model')[0].innerHTML;
-            var s_SNT = el.getElementsByClassName('SNT')[0].innerHTML;
-            var s_SPL = el.getElementsByClassName('SPL')[0].innerHTML;
-            var s_gender = el.getElementsByClassName('gender')[0].innerHTML;
-
-            var superiorEl = el.parentNode;
-            var imgOut = superiorEl.getElementsByClassName('Image-Outputed')[0];
-            var imgSrc = imgOut.getElementsByTagName('img')[0].src;
-            //alert(imgSrc);
-
-            var myMessage = "Skin ID: {0}\n\
-            Skin Model Name: {1}\n\
-            Skin Name/Type: {2}\n\
-            Singleplayer Location: {3}\n\
-            Gender: {4}".format(s_id, s_model, s_SNT, s_SPL, s_gender);
-
-            VK.api("wall.post", {
-                attachments: imgSrc,
-                message: myMessage
-            }, function (data) { });
-
-        }
+        
     },
     Uninstall: function () {
-
+        saveSelected = null;
     },
 };
 

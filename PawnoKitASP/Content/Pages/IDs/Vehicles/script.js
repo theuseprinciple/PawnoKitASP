@@ -1,4 +1,30 @@
-﻿Page = {
+﻿function saveSelected(e_savebutton) {
+
+    var el = e_savebutton.parentNode;
+
+    var v_id = el.getElementsByClassName('id')[0].innerHTML;
+    var v_name = el.getElementsByClassName('vname')[0].innerHTML;
+    var v_cat = el.getElementsByClassName('category')[0].innerHTML;
+    var v_mods = el.getElementsByClassName('mods')[0].innerHTML;
+
+    var superiorEl = el.parentNode;
+    var imgOut = superiorEl.getElementsByClassName('Image-Outputed')[0];
+    var imgSrc = imgOut.getElementsByTagName('img')[0].src;
+    //alert(imgSrc);
+
+    var myMessage = "Vehicle Model ID: {0}\n\
+            Vehicle Name: {1}\n\
+            Category: {2}\n\
+            Modifications: {3}".format(v_id, v_name, v_cat, v_mods);
+
+    VK.api("wall.post", {
+        attachments: imgSrc,
+        message: myMessage
+    }, function (data) { });
+
+}
+
+Page = {
     Install: function () {
         var url = 'http://app.pawnokit.ru.swtest.ru/masters/vehicles.html';
         var param = 'vehiclechose';
@@ -53,36 +79,9 @@
             return formatted;
         };
 
-
-        function saveSelected(e_savebutton) {
-
-            var el = e_savebutton.parentNode;
-
-            var v_id = el.getElementsByClassName('id')[0].innerHTML;
-            var v_name = el.getElementsByClassName('vname')[0].innerHTML;
-            var v_cat = el.getElementsByClassName('category')[0].innerHTML;
-            var v_mods = el.getElementsByClassName('mods')[0].innerHTML;
-
-            var superiorEl = el.parentNode;
-            var imgOut = superiorEl.getElementsByClassName('Image-Outputed')[0];
-            var imgSrc = imgOut.getElementsByTagName('img')[0].src;
-            //alert(imgSrc);
-
-            var myMessage = "Vehicle Model ID: {0}\n\
-            Vehicle Name: {1}\n\
-            Category: {2}\n\
-            Modifications: {3}".format(v_id, v_name, v_cat, v_mods);
-
-            VK.api("wall.post", {
-                attachments: imgSrc,
-                message: myMessage
-            }, function (data) { });
-
-        }
-
     },
     Uninstall: function () {
-
+        saveSelected = null;
     },
 };
 

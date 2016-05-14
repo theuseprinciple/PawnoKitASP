@@ -1,4 +1,8 @@
-﻿String.prototype.format = function () {
+﻿VK.init({
+    apiId: 4145494
+});
+
+String.prototype.format = function () {
     var formatted = this;
     for (var i = 0; i < arguments.length; i++) {
         var regexp = new RegExp('\\{' + i + '\\}', 'gi');
@@ -25,7 +29,7 @@ var PawnoKit = {
                     window.location = href;
                 });
         });
-    },
+    }
 };
 
 

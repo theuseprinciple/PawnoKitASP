@@ -30,7 +30,24 @@ namespace PawnoKitASP
                       ));
                       */
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                       "~/Content/site.css"));
+                       "~/Content/site.css"
+                       ));
+
+            bundles.Add(new ScriptBundle("~/bundles/pkPager").Include(
+                       //"~/Scripts/jquery-1.10.2.min.js",
+                       "~/Scripts/vk/openapi.js",
+                       "~/Scripts/vk/xd_connection.js",
+                       "~/Scripts/pawnokit/pawnokit.js",
+                       "~/Scripts/pawnokit/history.js",
+                       "~/Scripts/pawnokit/pawnokitpager.js"
+                       ));
+
+            bundles.Add(new ScriptBundle("~/bundles/pkNoPager").Include(
+                       //"~/Scripts/jquery-1.10.2.min.js",
+                       "~/Scripts/vk/openapi.js",
+                       "~/Scripts/vk/xd_connection.js",
+                       "~/Scripts/pawnokit/pawnokit.js"
+                       ));
         }
     }
 }

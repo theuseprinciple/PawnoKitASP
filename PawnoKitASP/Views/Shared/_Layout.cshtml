@@ -11,27 +11,15 @@
     <meta name="Keywords" content="PawnoKit, PawnKit, Pawno, Скриптинг">
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link type="text/css" rel="stylesheet" href="@Styles.Url("~/Content/css")">
-    <script src="@Scripts.Url("~/Scripts/jquery-1.10.2.min.js")"></script>
-
-    @*<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>*@
-    <script src="//vk.com/js/api/openapi.js"></script>
-    <script src="//vk.com/js/api/xd_connection.js?2"></script>
-
-    <script>
-        VK.init({
-            apiId: 4145494 // id созданного вами приложения вконтакте 
-        });
-    </script>
-
-    <script src="@Scripts.Url("~/Scripts/pawnokit.js")"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
     @if (2 > 1) // LOAD WITH PAGER
     {
-        <script src="@Scripts.Url("~/Scripts/history.js")"></script>
-        <script src="@Scripts.Url("~/Scripts/pawnokitpager.js")"></script>
+        @Scripts.Render("~/bundles/pkPager");
     }
     else
     {
+        @Scripts.Render("~/bundles/pkNoPager");
         <script>
             VK.callMethod("setLocation", window.location.pathname.slice(1));
         </script>
