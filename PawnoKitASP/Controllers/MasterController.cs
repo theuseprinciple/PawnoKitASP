@@ -14,9 +14,9 @@ namespace PawnoKitASP.Controllers
             return PartialView("~/Views/Shared/skins/"+ skinchose + ".cshtml");
         }
 
-        public ActionResult Vehicles(string category)
+        public ActionResult Vehicles(string vehiclechose)
         {
-            return View();
+            return PartialView("~/Views/Shared/vehicles/" + vehiclechose + ".cshtml");
         }
     }
 }

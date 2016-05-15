@@ -1117,6 +1117,18 @@
     <Content Include="Views\Shared\skins\hobos.cshtml" />
     <Content Include="Views\Shared\skins\mafia.cshtml" />
     <Content Include="Views\Shared\skins\037skins.cshtml" />
+    <Content Include="Views\Shared\vehicles\allvehicles.cshtml" />
+    <Content Include="Views\Shared\vehicles\boats.cshtml" />
+    <Content Include="Views\Shared\vehicles\tuneonly.cshtml" />
+    <Content Include="Views\Shared\vehicles\sportcars.cshtml" />
+    <Content Include="Views\Shared\vehicles\helicopters.cshtml" />
+    <Content Include="Views\Shared\vehicles\planes.cshtml" />
+    <Content Include="Views\Shared\vehicles\bikes.cshtml" />
+    <Content Include="Views\Shared\vehicles\rc.cshtml" />
+    <Content Include="Views\Shared\vehicles\tuneonly_loco_low_co.cshtml" />
+    <Content Include="Views\Shared\vehicles\tuneonly_wheel_arch_angels.cshtml" />
+    <Content Include="Views\Shared\vehicles\tuneonly_transfender.cshtml" />
+    <Content Include="Views\Shared\vehicles\notuneonly.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1128,7 +1140,6 @@
     <Folder Include="Views\En\" />
     <Folder Include="Views\Master\" />
     <Folder Include="Views\Pawnokit\" />
-    <Folder Include="Views\Shared\vehicles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

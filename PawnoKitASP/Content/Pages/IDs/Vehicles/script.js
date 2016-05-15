@@ -26,7 +26,7 @@
 
 Page = {
     Install: function () {
-        var url = 'http://app.pawnokit.ru.swtest.ru/masters/vehicles.html';
+        var url = '/master/vehicles';
         var param = 'vehiclechose';
 
         function getXmlHttp() {
