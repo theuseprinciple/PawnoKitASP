@@ -28,7 +28,7 @@
 
 Page = {
     Install: function () {
-        var url = 'http://app.pawnokit.ru.swtest.ru/masters/skins.html';
+        var url = '/master/skins';
         var param = 'skinchose';
 
         function getXmlHttp() {

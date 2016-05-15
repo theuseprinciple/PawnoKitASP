@@ -152,6 +152,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MasterController.cs" />
     <Compile Include="Controllers\RuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1105,6 +1106,17 @@
     <Content Include="Views\Ru\Tools\CommandCreator\_DCMD.cshtml" />
     <Content Include="Views\Ru\Tools\CommandCreator\_ZCMD.cshtml" />
     <Content Include="Views\Ru\Tools\CommandCreator\_STD.cshtml" />
+    <Content Include="Views\Shared\skins\allskins.cshtml" />
+    <Content Include="Views\Shared\skins\manskins.cshtml" />
+    <Content Include="Views\Shared\skins\legalists.cshtml" />
+    <Content Include="Views\Shared\skins\bikers.cshtml" />
+    <Content Include="Views\Shared\skins\normalskins.cshtml" />
+    <Content Include="Views\Shared\skins\beachskins.cshtml" />
+    <Content Include="Views\Shared\skins\bandskins.cshtml" />
+    <Content Include="Views\Shared\skins\womanskins.cshtml" />
+    <Content Include="Views\Shared\skins\hobos.cshtml" />
+    <Content Include="Views\Shared\skins\mafia.cshtml" />
+    <Content Include="Views\Shared\skins\037skins.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1114,7 +1126,9 @@
     <Folder Include="Models\" />
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\En\" />
+    <Folder Include="Views\Master\" />
     <Folder Include="Views\Pawnokit\" />
+    <Folder Include="Views\Shared\vehicles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
