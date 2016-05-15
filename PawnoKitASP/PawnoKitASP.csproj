@@ -1032,6 +1032,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\111.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\pawnokit\history.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -1136,7 +1137,6 @@
     <Folder Include="Content\Pages\IDs\Vehicles\Images\" />
     <Folder Include="Content\Pages\IDs\Weathers\Images\" />
     <Folder Include="Models\" />
-    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\En\" />
     <Folder Include="Views\Master\" />
     <Folder Include="Views\Pawnokit\" />

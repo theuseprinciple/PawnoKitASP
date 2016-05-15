@@ -13,13 +13,17 @@
     <link type="text/css" rel="stylesheet" href="@Styles.Url("~/Content/css")">
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
+    <script src="@Scripts.Url("~/Scripts/vk/openapi.js")"></script>
+    <script src="@Scripts.Url("~/Scripts/vk/xd_connection.js")"></script>
+    
+    <script src="@Scripts.Url("~/Scripts/pawnokit/pawnokit.js")"></script>
     @if (2 > 1) // LOAD WITH PAGER
     {
-        @Scripts.Render("~/bundles/pkPager");
+        <script src="@Scripts.Url("~/Scripts/pawnokit/history.js")"></script>
+        <script src="@Scripts.Url("~/Scripts/pawnokit/pawnokitpager.js")"></script>
     }
     else
     {
-        @Scripts.Render("~/bundles/pkNoPager");
         <script>
             VK.callMethod("setLocation", window.location.pathname.slice(1));
         </script>
