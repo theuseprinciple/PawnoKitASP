@@ -17,7 +17,7 @@
                 PawnoKitPager.loadPage(state.url);
             });
     });
-};
+}
 
 var PawnoKitPager = {
 
@@ -146,7 +146,11 @@ var PawnoKitPager = {
 
             console.log("Page has been loaded from " + url);
 
-            VK.callMethod("setLocation", url.slice(1));
+            if(useVk)
+            {
+                VK.callMethod("setLocation", url.slice(1));
+            }
+            
         });
     },
 
